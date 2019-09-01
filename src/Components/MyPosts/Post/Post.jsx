@@ -2,18 +2,19 @@ import React from 'react';
 
 import classes from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
 	return (
 		<div>
 			<div className={classes.post}>
 		 	<img className={classes.post_icon}
-		 		src='https://pngicon.ru/file/uploads/bojya_korovka-256x201.png' 
+		 		src={props.icon} 
 		 		alt='avatar'
 		 		/>
-		 	<p>Post 1</p>
+		 	<p className={classes.post_text}>{props.message}</p>
 			</div>
-			<div>
-		 	<span>Like</span>
+			<div className={classes.like}>
+				<span className={classes.like_count}>{props.like_count}</span>
+		 	<span className={classes.post_button}>Like</span>
 		 </div>
 		</div>
 		);
