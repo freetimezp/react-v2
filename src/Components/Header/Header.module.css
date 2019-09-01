@@ -1,0 +1,11 @@
+.app_header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #8CF196;
+}
+
+.app_header__logo {
+	max-width: 100px;
+	max-height: 100px
+}
