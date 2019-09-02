@@ -1,4 +1,3 @@
-
 * {
 	padding: 0;
 	margin: 0;
@@ -25,6 +24,11 @@ ul, li, a {
 
 .main_wrapper {
 	display: flex;
+}
+
+.main_wrapper_content {
+	margin: 10px 10px 0;
+	width: 100%;
 }
 
 

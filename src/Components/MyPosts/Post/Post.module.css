@@ -44,7 +44,8 @@
 
 .like_count {
 	margin-right: 10px;
-	font-size: 10px;
+	font-weight: 700;
+	font-size: 9px;
 	color: #097711;
 	font-style: italic;
 }

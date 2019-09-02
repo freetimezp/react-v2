@@ -6,19 +6,19 @@ const AppList = () => {
 	return (
     <ul className={classes.app_list}>
      <li>
-       <a href='#s'>Profile</a>
+       <a className={classes.app_list__item} href="/Profile">Profile</a>
      </li>
      <li>
-       <a href='#s'>Messages</a>
+       <a className={classes.app_list__item} href="/Dialogs">Messages</a>
      </li>
      <li>
-       <a href='#s'>News</a>
+       <a className={classes.app_list__item} href="/News">News</a>
      </li>
      <li>
-       <a href='#s'>Music</a>
+       <a className={classes.app_list__item} href="/Music">Music</a>
      </li>
      <li>
-       <a href='#s'>Settings</a>
+       <a className={classes.app_list__item} href="/Settings">Settings</a>
      </li>
     </ul>
 	);

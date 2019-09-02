@@ -13,7 +13,7 @@ const Post = (props) => {
 		 	<p className={classes.post_text}>{props.message}</p>
 			</div>
 			<div className={classes.like}>
-				<span className={classes.like_count}>{props.like_count}</span>
+				<span className={classes.like_count}>{props.likesCount}</span>
 		 	<span className={classes.post_button}>Like</span>
 		 </div>
 		</div>
