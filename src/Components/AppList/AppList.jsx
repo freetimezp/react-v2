@@ -1,24 +1,26 @@
 import React from 'react';
 
+import {NavLink} from 'react-router-dom';
+
 import classes from './AppList.module.css';
 
 const AppList = () => {
 	return (
     <ul className={classes.app_list}>
      <li>
-       <a className={classes.app_list__item} href="/Profile">Profile</a>
+       <NavLink className={classes.app_list__item} to="/Profile">Profile</NavLink>
      </li>
      <li>
-       <a className={classes.app_list__item} href="/Dialogs">Messages</a>
+       <NavLink className={classes.app_list__item} to="/Dialogs">Messages</NavLink>
      </li>
      <li>
-       <a className={classes.app_list__item} href="/News">News</a>
+       <NavLink className={classes.app_list__item} to="/News">News</NavLink>
      </li>
      <li>
-       <a className={classes.app_list__item} href="/Music">Music</a>
+       <NavLink className={classes.app_list__item} to="/Music">Music</NavLink>
      </li>
      <li>
-       <a className={classes.app_list__item} href="/Settings">Settings</a>
+       <NavLink className={classes.app_list__item} to="/Settings">Settings</NavLink>
      </li>
     </ul>
 	);

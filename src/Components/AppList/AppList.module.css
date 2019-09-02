@@ -2,7 +2,7 @@
 	margin: 10px 0 0 0;
 	width: 200px;
 	padding: 20px 10px;
-	background-color: #9B9B9B;
+	background-color: #4D4949;
 }
 
 .app_list li {
@@ -16,4 +16,8 @@
 
 .app_list__item:hover {
 	color: #3DE4D6;
+}
+
+.app_list__item:focus {
+	color: #1950CE;
 }
