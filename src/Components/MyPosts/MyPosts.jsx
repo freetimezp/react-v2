@@ -8,14 +8,14 @@ const MyPosts = () => {
 	return (
 		<div className={classes.myPosts}>
 			<h1 className={classes.myPosts_title}>My posts</h1>
-			<div className={classes.NewPost}>
+			<div className={classes.newPost}>
 				<textarea>
 				</textarea>
 			</div>
-			<div className={classes.MyPosts_button}>
+			<div className={classes.myPosts_button}>
 				<a href='#s'>Send</a>
 			</div>
-			<div className={classes.Posts}>
+			<div className={classes.posts}>
 				<Post message='Hi, how are you?' icon='https://pngicon.ru/file/uploads/bojya_korovka-256x201.png' likesCount='231'/>
 				<Post message='Thanks, I am fine. Nice to see you!' icon='http://rylik.ru/uploads/posts/2017-06/1498027622_butterflies-10-03.png' likesCount='12' />
 				<Post message='Привет. Что делаем?' icon='http://foodika.ru/wp-content/uploads/2018/01/oooo.plus_341-2.png' likesCount='23'/>

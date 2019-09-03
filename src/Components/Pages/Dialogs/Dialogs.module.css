@@ -1,0 +1,19 @@
+.dialogs_content {
+	display: flex;
+	padding: 10px;
+}
+
+.dialogs {
+	width: 50%;
+	border-right: 1px solid #ADBCF4;
+}
+
+.messages {
+	margin-left: 20px;
+	width: 50%;
+}
+
+.dialogs_content__title {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
