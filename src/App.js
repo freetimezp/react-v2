@@ -14,21 +14,21 @@ import './App.css';
 const App = () => {
   return (
   	<BrowserRouter>
-    <div className='app_wrapper'>
-      <Header />
+      <div className='app_wrapper'>
+        <Header />
 
-      <div className='main_wrapper'>
-        <AppList />
-        <div className='main_wrapper_content'>
-        	<Route path='/Profile' component={Profile} />
-        	<Route path='/Dialogs' component={Dialogs} />
-        	<Route path='/News' component={News} />
-        	<Route path='/Music' component={Music} />
-        	<Route path='/Settings' component={Settings} />
+        <div className='main_wrapper'>
+          <AppList />
+          <div className='main_wrapper_content'>
+          	<Route path='/Profile' component={Profile} />
+          	<Route path='/Dialogs' component={Dialogs} />
+          	<Route path='/News' component={News} />
+          	<Route path='/Music' component={Music} />
+          	<Route path='/Settings' component={Settings} />
+          </div>
         </div>
       </div>
-    </div>
-   </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
