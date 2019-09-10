@@ -39,7 +39,7 @@ const Dialogs = (props) => {
 	];
 
 	const MessagesElements = MessagesData
-	 .map( (text) =>	<MessageItem name={text.message} id={text.id} key={text.id.toString()} /> ); 
+	 .map( (text) =>	<MessageItem message={text.message} id={text.id} key={text.id.toString()} /> ); 
 
 	return (
 		<div className={classes.dialogs}>
