@@ -12,6 +12,9 @@ const MyPosts = () => {
 		{id: 3, message: 'Привет. Что делаем?', icon: 'http://foodika.ru/wp-content/uploads/2018/01/oooo.plus_341-2.png', likesCount: '23'},
 	]
 
+	const PostsElements = PostsData
+	 .map ( post => <Post message={post.message} icon={post.icon} likesCount={post.likesCount} key={post.id.toString()} /> );
+
 	return (
 		<div className={classes.myPosts}>
 			<h1 className={classes.myPosts_title}>My posts</h1>
@@ -23,9 +26,7 @@ const MyPosts = () => {
 				<a href='#s'>Send</a>
 			</div>
 			<div className={classes.posts}>
-				<Post message={PostsData[0].message} icon={PostsData[0].icon} likesCount={PostsData[0].likesCount}/>
-				<Post message={PostsData[1].message} icon={PostsData[1].icon} likesCount={PostsData[1].likesCount}/>
-				<Post message={PostsData[2].message} icon={PostsData[2].icon} likesCount={PostsData[2].likesCount}/>
+				{ PostsElements }
 			</div>
 		</div>
 		);
