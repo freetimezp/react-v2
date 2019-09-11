@@ -11,7 +11,8 @@ import Settings from './Components/Pages/Settings/Settings.jsx';
 
 import './App.css';
 
-const App = () => {
+const App = (props) => {
+
   return (
   	<BrowserRouter>
       <div className='app_wrapper'>
@@ -20,8 +21,8 @@ const App = () => {
         <div className='main_wrapper'>
           <AppList />
           <div className='main_wrapper_content'>
-          	<Route path='/Profile' component={Profile} />
-          	<Route path='/Dialogs' component={Dialogs} />
+          	<Route path='/Profile' render={ () => <Profile PostsData={props.PostsData} />} />
+          	<Route path='/Dialogs' render={ () => <Dialogs DialogsData={props.DialogsData} MessagesData={props.MessagesData} />} />
           	<Route path='/News' component={News} />
           	<Route path='/Music' component={Music} />
           	<Route path='/Settings' component={Settings} />
