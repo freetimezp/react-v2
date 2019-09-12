@@ -1,8 +1,30 @@
+.messageWrapper {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	transition: all 0.5s ease;
+}
+
+.messageWrapper:hover .message {
+	border: 1px solid #2074AF;
+	box-shadow: 0 1px #2074AF;
+}
+
 .messages_item {
 	display: flex;
 	align-items: center;
 	margin-bottom: 5px;
 }
+
+.message {
+	padding: 10px 30px 10px 10px;
+	width: 100%;
+	border: 1px solid #ADD6F2;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
+
+
 
 .messages_item__user {
 	padding: 5px;
@@ -31,11 +53,18 @@
 	border-radius: 5px;
 	padding: 10px;
 	background-color: #E0F0FE;
-	color: #0F5490;
+	color: #389BF2;
 	transition: all 0.6s ease;
 }
 
+
 .message:hover {
 	border: 1px solid #389BF2;
-	color: #389BF2;
+	color: #0F5490;
+}
+
+.messageIcon {
+	width: 30px;
+	border-radius: 50%;
+	margin-right: 5px;
 }

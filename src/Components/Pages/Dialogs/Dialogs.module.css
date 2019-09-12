@@ -2,3 +2,15 @@
 	display: flex;
 }
 
+.dialogsItems {
+	padding: 10px;	
+	width: 50%;
+	border-right: 1px dashed #2074AF;
+}
+
+.messages {
+	padding: 10px;	
+	width: 50%;
+}
+
+

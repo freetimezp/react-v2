@@ -4,7 +4,11 @@ import classes from './MessageItem.module.css';
 
 const MessageItem = (props) => {
 	return (
-		<li className={classes.dialog}>{props.message}</li>
+		<div className={classes.messageWrapper}>
+			<img className={classes.messageIcon} src={props.messageIcon} />
+			<li className={classes.message}>{props.message}</li>
+		</div>
+		
 	);
 }
 
