@@ -13,13 +13,19 @@ import './App.css';
 
 const App = (props) => {
 
+// let FriendsData = [
+//   {id: 1, name: 'Andrew', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'},
+//   {id: 2, name: 'Sasha', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'},
+//   {id: 3, name: 'Sveta', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'}
+//  ]
+
   return (
   	<BrowserRouter>
       <div className='app_wrapper'>
         <Header />
 
         <div className='main_wrapper'>
-          <AppList State={props.State.friendsPage} />
+          <AppList FriendsData={props.State.friendsPage.FriendsData}  />
           <div className='main_wrapper_content'>
           	<Route path='/Profile' render={ () => <Profile State={props.State.profilePage} />} />
           	<Route path='/Dialogs' render={ () => <Dialogs State={props.State.dialogsPage} />} />

@@ -8,9 +8,9 @@ let State = {
  },
  	dialogsPage: {
 	 	MessagesData: [
-			 {id: 1, message: 'Hi', messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png'},
-			 {id: 2, message: 'Yo', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFZ13o5AqDJMCHXl8P_o-qqClgSZpQUFCauYobfbY9AVja2RlNQ'},
-			 {id: 3, message: 'Ho', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6fKkb9R9TxV7PBLRnpBXfmLU2nuTAD4ZZIxMY6bnq5O6bqrupw'}
+			 {id: 1, message: 'Hi', messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png', alt: 'logo'},
+			 {id: 2, message: 'Yo', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFZ13o5AqDJMCHXl8P_o-qqClgSZpQUFCauYobfbY9AVja2RlNQ', alt: 'logo'},
+			 {id: 3, message: 'Ho', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6fKkb9R9TxV7PBLRnpBXfmLU2nuTAD4ZZIxMY6bnq5O6bqrupw', alt: 'logo'}
 			],
 			DialogsData: [
 			 {id: 1, name: 'Dimych'},
@@ -18,15 +18,14 @@ let State = {
 			 {id: 3, name: 'Anna'},
 			 {id: 4, name: 'Semen'}
 		 ]
- }
- 
-  // friendsPage: {
-  // 	FriendsData: [
- 	// 	 {id: 1, name: 'Andrew', icon: 'https://bower.io/img/bower-logo.png' },
- 	//  	{id: 2, name: 'Sasha', icon: 'https://bower.io/img/bower-logo.png' },
- 	// 		{id: 3, name: 'Sveta', icon: 'https://bower.io/img/bower-logo.png' }
-  // 	]
-  // }
+ },
+  friendsPage: {
+  	FriendsData: [
+ 		 {id: 1, name: 'Andrew', icon: 'https://bower.io/img/bower-logo.png' },
+ 	 	{id: 2, name: 'Sasha', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjoRczCOU1Jiwsp5WlbQKq5MOHqBd20CnPqjfblMQ6kWJg_v3P' },
+ 			{id: 3, name: 'Sveta', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxxkhwMYeAgPbSyN8u4eYV_R6kuGpzQIGNS6_-Mf-VR5WqVyYjQ' }
+  	]
+  }
 }
 
 export default State;

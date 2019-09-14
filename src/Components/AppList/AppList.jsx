@@ -6,7 +6,7 @@ import Friends from './Friends/Friends.jsx';
 import classes from './AppList.module.css';
 
 const AppList = (props) => {
-  debugger;
+
 	return (
     <div className={classes.app_wrapper}>
       <ul className={classes.app_list}>
@@ -26,7 +26,7 @@ const AppList = (props) => {
          <NavLink className={classes.app_list__item} to="/Settings">Settings</NavLink>
        </li>
       </ul>
-      <Friends />
+      <Friends FriendsData={props.FriendsData} />
     </div>
 	);
 }

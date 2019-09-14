@@ -13,7 +13,7 @@ const Dialogs = (props) => {
 	 .map( (dialog) =>	<DialogItem name={dialog.name} id={dialog.id} key={dialog.id.toString()} /> ); 
 
 	const MessagesElements = props.State.MessagesData
-	 .map( (text) =>	<MessageItem message={text.message} id={text.id} messageIcon={text.messageIcon} key={text.id.toString()} /> ); 
+	 .map( (text) =>	<MessageItem message={text.message} id={text.id} messageIcon={text.messageIcon} key={text.id.toString()} alt={text.logo} /> ); 
 
 	return (
 		<div className={classes.dialogs}>
