@@ -15,15 +15,32 @@ const Dialogs = (props) => {
 	const MessagesElements = props.State.MessagesData
 	 .map( (text) =>	<MessageItem message={text.message} id={text.id} messageIcon={text.messageIcon} key={text.id.toString()} alt={text.logo} /> ); 
 
+	let newMessageElement = React.createRef();
+	
+	let sendMessage = () => {
+		let text = newMessageElement.current.value;
+		alert(text);
+	};
+
 	return (
-		<div className={classes.dialogs}>
-			<ul className={classes.dialogsItems}>
-				{	DialogsElements }
-			</ul>
-			<ul className={classes.messages}>
-				{ MessagesElements }
-			</ul>
-		</div>
+			<div className={classes.dialogs}>
+				<ul className={classes.dialogsItems}>
+					{	DialogsElements }
+				</ul>
+				<div className={classes.messages_wrapper}>
+					<ul className={classes.messages}>
+						{ MessagesElements }
+					</ul>
+					<div className={classes.newPost_wrapper}>
+						<div className={classes.newPost}>
+					 	<textarea ref={newMessageElement}></textarea>
+					 </div>
+					 <div className={classes.myPosts_button}>
+						 <button onClick={ sendMessage }>Send post</button>
+				 	</div>
+					</div>
+				</div>
+			</div>
 		);
 
 }
