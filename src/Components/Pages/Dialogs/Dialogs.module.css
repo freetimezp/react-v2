@@ -37,7 +37,7 @@
 }
 
 .myPosts_button button {
-	padding: 5px 10px;
+	padding: 10px 15px;
 	background-color: 	#498EBF;
 	border: 1px solid transparent;
 	border-radius: 5px;
@@ -52,6 +52,7 @@
 
 .myPosts_button button:hover {
 	color: #498EBF;
+	padding: 10px 20px 10px 10px;
 	border: 1px solid #498EBF;
 	background-color: 	#fff;
 }

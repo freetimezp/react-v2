@@ -7,6 +7,7 @@ import MessageItem from './MessageItem/MessageItem.jsx';
 import classes from './Dialogs.module.css';
 
 
+
 const Dialogs = (props) => {
 
 	const DialogsElements = props.State.DialogsData

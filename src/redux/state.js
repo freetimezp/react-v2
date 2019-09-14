@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from './../render.js';
+
 let State = {
  	profilePage: {
 		 PostsData: [
@@ -26,6 +28,17 @@ let State = {
  			{id: 3, name: 'Sveta', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxxkhwMYeAgPbSyN8u4eYV_R6kuGpzQIGNS6_-Mf-VR5WqVyYjQ' }
   	]
   }
+}
+
+export let addPost = (postMessage) => {
+	let newPost = {
+		id: 5,
+		message: postMessage, 
+		icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
+		likesCount: 0
+	};
+	State.profilePage.PostsData.push(newPost);
+	rerenderEntireTree(State);
 }
 
 export default State;

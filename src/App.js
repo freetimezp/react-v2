@@ -13,29 +13,21 @@ import './App.css';
 
 const App = (props) => {
 
-// let FriendsData = [
-//   {id: 1, name: 'Andrew', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'},
-//   {id: 2, name: 'Sasha', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'},
-//   {id: 3, name: 'Sveta', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo-Free.jpg', alt: 'logo'}
-//  ]
-
   return (
-  	<BrowserRouter>
-      <div className='app_wrapper'>
-        <Header />
+    <div className='app_wrapper'>
+      <Header />
 
-        <div className='main_wrapper'>
-          <AppList FriendsData={props.State.friendsPage.FriendsData}  />
-          <div className='main_wrapper_content'>
-          	<Route path='/Profile' render={ () => <Profile State={props.State.profilePage} />} />
-          	<Route path='/Dialogs' render={ () => <Dialogs State={props.State.dialogsPage} />} />
-          	<Route path='/News' component={News} />
-          	<Route path='/Music' component={Music} />
-          	<Route path='/Settings' component={Settings} />
-          </div>
+      <div className='main_wrapper'>
+        <AppList FriendsData={props.State.friendsPage.FriendsData}  />
+        <div className='main_wrapper_content'>
+        	<Route path='/Profile' render={ () => <Profile State={props.State.profilePage} addPost={props.addPost} />} />
+         	<Route path='/Dialogs' render={ () => <Dialogs State={props.State.dialogsPage} />} />
+         	<Route path='/News' component={News} />
+         	<Route path='/Music' component={Music} />
+         	<Route path='/Settings' component={Settings} />
         </div>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 
