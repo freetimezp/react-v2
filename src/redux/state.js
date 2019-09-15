@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from './../render.js';
+let rerenderEntireTree = () => {
+
+}
 
 let State = {
  	profilePage: {
@@ -6,7 +8,8 @@ let State = {
 			 {id: 1, message: 'Hi, how are you?', icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png', likesCount: '231'},
 			 {id: 2, message: 'Thanks, I am fine. Nice to see you!', icon: 'http://rylik.ru/uploads/posts/2017-06/1498027622_butterflies-10-03.png', likesCount: '12'},
 			 {id: 3, message: 'Привет. Что делаем?', icon: 'http://foodika.ru/wp-content/uploads/2018/01/oooo.plus_341-2.png', likesCount: '23'}
-		 ]
+		 ],
+		 newPostText: 'it-kamasytra.com'
  },
  	dialogsPage: {
 	 	MessagesData: [
@@ -30,14 +33,25 @@ let State = {
   }
 }
 
-export let addPost = (postMessage) => {
+export const subscribe = (observer) => {
+	rerenderEntireTree = observer;
+}
+
+export const addPost = () => {
 	let newPost = {
 		id: 5,
-		message: postMessage, 
+		message: State.profilePage.newPostText, 
 		icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
 		likesCount: 0
 	};
 	State.profilePage.PostsData.push(newPost);
+
+	State.profilePage.newPostText = '';
+	rerenderEntireTree(State);
+}
+
+export const updateNewPostText = (newText) => {
+	State.profilePage.newPostText = (newText);
 	rerenderEntireTree(State);
 }
 

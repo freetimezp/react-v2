@@ -12,7 +12,12 @@ const Profile = (props) => {
    <div>
     <ProfileInfo srcInfo='https://images.samsung.com/is/image/samsung/p5/ru/explore/landscape-photography/Explore_How_To_Take_Great_Landscape_Photography_KV.jpg?$ORIGIN_JPG$' altInfo='пейзаж' />
     <About />
-    <MyPosts PostsData={props.State.PostsData} addPost={props.addPost} />
+    <MyPosts 
+    	PostsData={props.profilePage.PostsData} 
+    	newPostText={props.profilePage.newPostText} 
+    	addPost={props.addPost} 
+    	updateNewPostText={props.updateNewPostText}
+    />
   </div>
 		);
 }

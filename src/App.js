@@ -3,6 +3,7 @@ import {Route, BrowserRouter} from 'react-router-dom';
 
 import Header from './Components/Header/Header.jsx';
 import AppList from './Components/AppList/AppList.jsx';
+
 import Profile from './Components/Pages/Profile/Profile.jsx';
 import Dialogs from './Components/Pages/Dialogs/Dialogs.jsx';
 import News from './Components/Pages/News/News.jsx';
@@ -20,8 +21,18 @@ const App = (props) => {
       <div className='main_wrapper'>
         <AppList FriendsData={props.State.friendsPage.FriendsData}  />
         <div className='main_wrapper_content'>
-        	<Route path='/Profile' render={ () => <Profile State={props.State.profilePage} addPost={props.addPost} />} />
-         	<Route path='/Dialogs' render={ () => <Dialogs State={props.State.dialogsPage} />} />
+        	<Route 
+            path='/Profile' 
+            render={ () => <Profile 
+              profilePage={props.State.profilePage} 
+              addPost={props.addPost} 
+              updateNewPostText={props.updateNewPostText} />} 
+          />
+         	<Route 
+            path='/Dialogs' 
+            render={ () => <Dialogs 
+              dialogsPage={props.State.dialogsPage} />} 
+          />
          	<Route path='/News' component={News} />
          	<Route path='/Music' component={Music} />
          	<Route path='/Settings' component={Settings} />
