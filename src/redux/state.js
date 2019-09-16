@@ -36,23 +36,24 @@ let Store = {
 		rerenderEntireTree() {
 
 	},
-		addPost(){
-			let newPost = {
-				id: 5,
-				message: this._State.profilePage.newPostText, 
-				icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
-				likesCount: 0
-			};
-			this._State.profilePage.PostsData.push(newPost);
-			this._State.profilePage.newPostText = '';
-			this._rerenderEntireTree(this._State);
-	},
-		updateNewPostText(newText) {
-			this._State.profilePage.newPostText = (newText);
-			this._rerenderEntireTree(this._State);
-	},
 		subscribe(observer) {
 			this._rerenderEntireTree = observer;
+		},
+		dispatch(action) {
+			if (action.type === 'ADD-POST') {
+				let newPost = {
+					id: 5,
+					message: this._State.profilePage.newPostText, 
+					icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
+					likesCount: 0
+				};
+				this._State.profilePage.PostsData.push(newPost);
+				this._State.profilePage.newPostText = '';
+				this._rerenderEntireTree(this._State);
+			} else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+				this._State.profilePage.newPostText = action.newText;
+			 this._rerenderEntireTree(this._State);
+			}
 		}
 }
 
