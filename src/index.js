@@ -1,13 +1,11 @@
 import React from 'react';
 import * as serviceWorker from './serviceWorker';
-import State, {subscribe} from './redux/state.js';
-
+import Store from './redux/state.js';
 
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
-import {addPost, updateNewPostText} from './redux/state.js';
 
 
 let rerenderEntireTree = (State) => {
@@ -15,14 +13,14 @@ let rerenderEntireTree = (State) => {
  	<BrowserRouter>
  	 <App 
  	 	State={State} 
- 	 	addPost={addPost}
- 	 	updateNewPostText={updateNewPostText} 
+ 	 	addPost={Store.addPost.bind(Store)}
+ 	 	updateNewPostText={Store.updateNewPostText.bind(Store)} 
  	 />
  	</BrowserRouter>, document.getElementById('root'));
 }
 
-rerenderEntireTree(State); 
-subscribe(rerenderEntireTree);
+rerenderEntireTree(Store.getState()); 
+Store.subscribe(rerenderEntireTree);
 
 
 // unregister() to register() below. Note this comes with some pitfalls.
