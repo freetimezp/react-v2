@@ -40,7 +40,7 @@ let Store = {
 			this._rerenderEntireTree = observer;
 		},
 		dispatch(action) {
-			if (action.type === 'ADD-POST') {
+			if (action.type === ADD_POST) {
 				let newPost = {
 					id: 5,
 					message: this._State.profilePage.newPostText, 
@@ -50,11 +50,28 @@ let Store = {
 				this._State.profilePage.PostsData.push(newPost);
 				this._State.profilePage.newPostText = '';
 				this._rerenderEntireTree(this._State);
-			} else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+			} else if (action.type === UPDATE_NEW_POST_TEXT) {
 				this._State.profilePage.newPostText = action.newText;
 			 this._rerenderEntireTree(this._State);
 			}
 		}
+}
+
+const ADD_POST = 'ADD-POST';
+
+export const addPostActionCreator = () => {
+	return {
+		type: ADD_POST
+	}
+}
+
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
+export const updateNewPostTextActionCreator = (text) => {
+		return {
+		type: UPDATE_NEW_POST_TEXT,
+		newText: text
+	};
 }
 
 window.Store = Store;
