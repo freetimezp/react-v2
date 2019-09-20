@@ -10,17 +10,18 @@ let Store = {
 			 newPostText: 'it-kamasytra.com'
 	 },
 	 	dialogsPage: {
+		 	DialogsData: [
+				 {id: 1, name: 'Dimych'},
+				 {id: 2, name: 'Andrew'},
+				 {id: 3, name: 'Anna'},
+				 {id: 4, name: 'Semen'}
+			 ],
 		 	MessagesData: [
 				 {id: 1, message: 'Hi', messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png', alt: 'logo'},
 				 {id: 2, message: 'Yo', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFZ13o5AqDJMCHXl8P_o-qqClgSZpQUFCauYobfbY9AVja2RlNQ', alt: 'logo'},
 				 {id: 3, message: 'Ho', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6fKkb9R9TxV7PBLRnpBXfmLU2nuTAD4ZZIxMY6bnq5O6bqrupw', alt: 'logo'}
 				],
-				DialogsData: [
-				 {id: 1, name: 'Dimych'},
-				 {id: 2, name: 'Andrew'},
-				 {id: 3, name: 'Anna'},
-				 {id: 4, name: 'Semen'}
-			 ]
+			 newMessageText: ''
 	 },
 	  friendsPage: {
 	  	FriendsData: [
@@ -53,11 +54,28 @@ let Store = {
 			} else if (action.type === UPDATE_NEW_POST_TEXT) {
 				this._State.profilePage.newPostText = action.newText;
 			 this._rerenderEntireTree(this._State);
+			} else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+				this._State.dialogsPage.newMessageText = action.newMessage;
+				this._rerenderEntireTree(this._State);
+			} else if (action.type === SEND_MESSAGE) {
+				let newMassage = {
+					id: 6,
+					message: 'Sun',
+					messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png',
+					alt: 'logo'
+				};
+				this._State.dialogsPage.MessagesData.push(newMassage);
+				this._State.dialogsPage.newMessageText = '';
+ 			this._rerenderEntireTree(this._State);
 			}
 		}
 }
 
 const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
+const UPDATE_NEW_MESSAGE_TEXT = 'UDPATE-NEW-MASSAGE-TEXT';
+const SEND_MESSAGE = 'SEND-MASSAGE';
 
 export const addPostActionCreator = () => {
 	return {
@@ -65,13 +83,24 @@ export const addPostActionCreator = () => {
 	}
 }
 
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+export const sendMessageActionCreator = () => {
+	return {
+		type: SEND_MESSAGE
+	}
+}
 
-export const updateNewPostTextActionCreator = (text) => {
+export const updateNewPostTextActionCreator = (newText) => {
 		return {
 		type: UPDATE_NEW_POST_TEXT,
-		newText: text
+		newText: newText
 	};
+}
+
+export const updateNewMessageTextActionCreator = (newMessage) => {
+	return {
+		type: UPDATE_NEW_MESSAGE_TEXT,
+		newMessage: newMessage
+	}
 }
 
 window.Store = Store;

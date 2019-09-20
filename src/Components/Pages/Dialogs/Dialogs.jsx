@@ -6,6 +6,8 @@ import MessageItem from './MessageItem/MessageItem.jsx';
 
 import classes from './Dialogs.module.css';
 
+import {sendMessageActionCreator,updateNewMessageTextActionCreator} from './../../../redux/state.js';
+
 
 
 const Dialogs = (props) => {
@@ -16,11 +18,15 @@ const Dialogs = (props) => {
 	const MessagesElements = props.dialogsPage.MessagesData
 	 .map( (text) =>	<MessageItem message={text.message} id={text.id} messageIcon={text.messageIcon} key={text.id.toString()} alt={text.logo} /> ); 
 
-	let newMessageElement = React.createRef();
+	let newMessageText = props.newMessageText;
 	
 	let sendMessage = () => {
-		let text = newMessageElement.current.value;
-		alert(text);
+		props.Store.dispatch( sendMessageActionCreator() );
+	};
+
+	let onMessageChange = (event) => {
+		let newMessage = event.target.value;
+		props.Store.dispatch( updateNewMessageTextActionCreator(newMessage) );
 	};
 
 	return (
@@ -34,10 +40,14 @@ const Dialogs = (props) => {
 					</ul>
 					<div className={classes.newPost_wrapper}>
 						<div className={classes.newPost}>
-					 	<textarea ref={newMessageElement}></textarea>
-					 </div>
+					 	<textarea 
+					 		value={ newMessageText }
+					 		onChange={ onMessageChange }
+					 		placeholder= 'Enter your message'
+					 		></textarea>
+					 </div>  
 					 <div className={classes.myPosts_button}>
-						 <button onClick={ sendMessage }>Send post</button>
+						 <button onClick={ sendMessage }>Send message</button>
 				 	</div>
 					</div>
 				</div>
