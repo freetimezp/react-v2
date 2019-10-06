@@ -6,7 +6,7 @@ import MessageItem from './MessageItem/MessageItem.jsx';
 
 import classes from './Dialogs.module.css';
 
-import {sendMessageActionCreator,updateNewMessageTextActionCreator} from './../../../redux/state.js';
+import {sendMessageActionCreator,updateNewMessageTextActionCreator} from './../../../redux/dialogs-reducer.js';
 
 
 

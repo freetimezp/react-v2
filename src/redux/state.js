@@ -1,3 +1,6 @@
+import profileReducer from './profile-reducer.js';
+import dialogsReducer from './dialogs-reducer.js';
+import friendsReducer from './friends-reducer.js';
 
 let Store = {
 		_State: {
@@ -41,66 +44,13 @@ let Store = {
 			this._rerenderEntireTree = observer;
 		},
 		dispatch(action) {
-			if (action.type === ADD_POST) {
-				let newPost = {
-					id: 5,
-					message: this._State.profilePage.newPostText, 
-					icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
-					likesCount: 0
-				};
-				this._State.profilePage.PostsData.push(newPost);
-				this._State.profilePage.newPostText = '';
-				this._rerenderEntireTree(this._State);
-			} else if (action.type === UPDATE_NEW_POST_TEXT) {
-				this._State.profilePage.newPostText = action.newText;
-			 this._rerenderEntireTree(this._State);
-			} else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-				this._State.dialogsPage.newMessageText = action.newMessage;
-				this._rerenderEntireTree(this._State);
-			} else if (action.type === SEND_MESSAGE) {
-				let newMassage = {
-					id: 6,
-					message: 'Sun',
-					messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png',
-					alt: 'logo'
-				};
-				this._State.dialogsPage.MessagesData.push(newMassage);
-				this._State.dialogsPage.newMessageText = '';
- 			this._rerenderEntireTree(this._State);
-			}
+			this._State.profilePage = profileReducer(this._State.profilePage, action);
+			this._State.dialogsPage = dialogsReducer(this._State.dialogsPage, action);
+			this._State.friendsPage = friendsReducer(this._State.friendsPage, action);
+
+			this._rerenderEntireTree(this._State);
+			
 		}
-}
-
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-const UPDATE_NEW_MESSAGE_TEXT = 'UDPATE-NEW-MASSAGE-TEXT';
-const SEND_MESSAGE = 'SEND-MASSAGE';
-
-export const addPostActionCreator = () => {
-	return {
-		type: ADD_POST
-	}
-}
-
-export const sendMessageActionCreator = () => {
-	return {
-		type: SEND_MESSAGE
-	}
-}
-
-export const updateNewPostTextActionCreator = (newText) => {
-		return {
-		type: UPDATE_NEW_POST_TEXT,
-		newText: newText
-	};
-}
-
-export const updateNewMessageTextActionCreator = (newMessage) => {
-	return {
-		type: UPDATE_NEW_MESSAGE_TEXT,
-		newMessage: newMessage
-	}
 }
 
 window.Store = Store;
