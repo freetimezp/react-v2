@@ -1,7 +1,22 @@
 const UPDATE_NEW_MESSAGE_TEXT = 'UDPATE-NEW-MASSAGE-TEXT';
 const SEND_MESSAGE = 'SEND-MASSAGE';
 
-const dialogsReducer = (state, action) => {
+let initialState = {
+		 	DialogsData: [
+				 {id: 1, name: 'Dimych'},
+				 {id: 2, name: 'Andrew'},
+				 {id: 3, name: 'Anna'},
+				 {id: 4, name: 'Semen'}
+			 ],
+		 	MessagesData: [
+				 {id: 1, message: 'Hi', messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png', alt: 'logo'},
+				 {id: 2, message: 'Yo', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFZ13o5AqDJMCHXl8P_o-qqClgSZpQUFCauYobfbY9AVja2RlNQ', alt: 'logo'},
+				 {id: 3, message: 'Ho', messageIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6fKkb9R9TxV7PBLRnpBXfmLU2nuTAD4ZZIxMY6bnq5O6bqrupw', alt: 'logo'}
+				],
+			 newMessageText: ''
+};
+
+const dialogsReducer = (state = initialState, action) => {
 
 	switch(action.type) {
 		case UPDATE_NEW_MESSAGE_TEXT: 
@@ -10,12 +25,11 @@ const dialogsReducer = (state, action) => {
 		case SEND_MESSAGE:
 			let newMassage = {
 					id: 6,
-					message: 'Sun',
+					message: state.newMessageText,
 					messageIcon: 'https://pngimage.net/wp-content/uploads/2018/06/rfhnbyrf-png-5.png',
 					alt: 'logo'
 				};
 				state.MessagesData.push(newMassage);
-				state.newMessageText = '';
 		 return state;
 		default:
 		 return state;
