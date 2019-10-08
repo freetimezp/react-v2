@@ -8,8 +8,6 @@ import classes from './Dialogs.module.css';
 
 import {sendMessageActionCreator,updateNewMessageTextActionCreator} from './../../../redux/dialogs-reducer.js';
 
-
-
 const Dialogs = (props) => {
 
 	const DialogsElements = props.dialogsPage.DialogsData
@@ -21,12 +19,12 @@ const Dialogs = (props) => {
 	let newMessageText = props.newMessageText;
 	
 	let sendMessage = () => {
-		props.Store.dispatch( sendMessageActionCreator() );
+		props.sendMessage();
 	};
 
 	let onMessageChange = (event) => {
 		let newMessage = event.target.value;
-		props.Store.dispatch( updateNewMessageTextActionCreator(newMessage) );
+		props.updateNewMessageText(newMessage);
 	};
 
 	return (

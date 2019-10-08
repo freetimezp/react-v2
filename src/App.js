@@ -9,6 +9,7 @@ import Dialogs from './Components/Pages/Dialogs/Dialogs.jsx';
 import News from './Components/Pages/News/News.jsx';
 import Music from './Components/Pages/Music/Music.jsx';
 import Settings from './Components/Pages/Settings/Settings.jsx';
+import DialogsContainer from './Components/Pages/Dialogs/DialogsContainer.jsx';
 
 import './App.css';
 
@@ -19,19 +20,15 @@ const App = (props) => {
       <Header />
 
       <div className='main_wrapper'>
-        <AppList FriendsData={props.State.friendsPage.FriendsData}  />
+        <AppList FriendsData={props.state.friendsPage.FriendsData}  />
         <div className='main_wrapper_content'>
         	<Route 
             path='/Profile' 
-            render={ () => <Profile 
-              profilePage={props.State.profilePage} 
-              dispatch={props.dispatch} />} 
+            render={ () => <Profile store={props.store} />} 
           />
          	<Route 
             path='/Dialogs' 
-            render={ () => <Dialogs 
-              dialogsPage={props.State.dialogsPage}
-              Store={props.Store} />} 
+            render={ () => <DialogsContainer store={props.store} />} 
           />
          	<Route path='/News' component={News} />
          	<Route path='/Music' component={Music} />

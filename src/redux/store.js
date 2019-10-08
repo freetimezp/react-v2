@@ -2,8 +2,8 @@ import profileReducer from './profile-reducer.js';
 import dialogsReducer from './dialogs-reducer.js';
 import friendsReducer from './friends-reducer.js';
 
-let Store = {
-		_State: {
+let store = {
+		_state: {
 	 	profilePage: {
 			 PostsData: [
 				 {id: 1, message: 'Hi, how are you?', icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png', likesCount: '231'},
@@ -35,7 +35,7 @@ let Store = {
 	 }
 	},
 		getState() {
-			return this._State;
+			return this._state;
 	},
 		rerenderEntireTree() {
 
@@ -44,15 +44,15 @@ let Store = {
 			this._rerenderEntireTree = observer;
 		},
 		dispatch(action) {
-			this._State.profilePage = profileReducer(this._State.profilePage, action);
-			this._State.dialogsPage = dialogsReducer(this._State.dialogsPage, action);
-			this._State.friendsPage = friendsReducer(this._State.friendsPage, action);
+			this._state.profilePage = profileReducer(this._state.profilePage, action);
+			this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+			this._state.friendsPage = friendsReducer(this._state.friendsPage, action);
 
-			this._rerenderEntireTree(this._State);
+			this._rerenderEntireTree(this._state);
 			
 		}
 }
 
-window.Store = Store;
+window.store = store;
 
-export default Store;
+export default store;
