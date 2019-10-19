@@ -18,9 +18,8 @@ const App = (props) => {
   return (
     <div className='app_wrapper'>
       <Header />
-
       <div className='main_wrapper'>
-        <AppList FriendsData={props.state.friendsPage.FriendsData}  />
+        <AppList />
         <div className='main_wrapper_content'>
         	<Route 
             path='/Profile' 

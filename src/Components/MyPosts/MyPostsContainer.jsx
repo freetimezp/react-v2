@@ -7,18 +7,18 @@ let mapStateToProps = (state) => {
  return {
   PostsData: state.profilePage.PostsData,
   newPostText: state.profilePage.newPostText
-	 }
+	}
 }
 
 let mapDispatchToProps = (dispatch) => {
 	 return {
    addPost: () => {
-   	dispatch(addPostActionCreator());
-   },
+     	dispatch(addPostActionCreator());
+     },
    onPostChange: (newText) => {
-   	let action = updateNewPostTextActionCreator(newText);
-	  	dispatch(action);
-   }
+     	let action = updateNewPostTextActionCreator(newText);
+  	  	dispatch(action);
+     }
 	 }
 }
 

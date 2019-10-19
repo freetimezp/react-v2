@@ -20,16 +20,19 @@ const profileReducer = (state = initialState, action) => {
 				icon: 'https://pngicon.ru/file/uploads/bojya_korovka-256x201.png',
 				likesCount: 0
 			};
-			state.PostsData.push(newPost);
-			state.newPostText = '';
-			return state;
-		case UPDATE_NEW_POST_TEXT: 
-		 state.newPostText = action.newText;
-		 return state;
+			let stateCopy = {...state};
+   stateCopy.PostsData = [...state.PostsData];
+			stateCopy.PostsData.push(newPost);
+			stateCopy.newPostText = '';
+			return stateCopy; 
+		case UPDATE_NEW_POST_TEXT: {
+			let stateCopy = {...state};
+		 stateCopy.newPostText = action.newText;
+		 return stateCopy;
+		}
 		default:
 		 return state;
 	}
-
 }
 
 export const addPostActionCreator = () => {

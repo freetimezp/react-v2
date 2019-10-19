@@ -26,7 +26,7 @@ const AppList = (props) => {
          <NavLink className={classes.app_list__item} to="/Settings">Settings</NavLink>
        </li>
       </ul>
-      <Friends FriendsData={props.FriendsData} />
+      {/*<Friends FriendsData={props.FriendsData} />*/}
     </div>
 	);
 }
