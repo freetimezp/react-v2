@@ -10,7 +10,7 @@ import News from './Components/Pages/News/News.jsx';
 import Music from './Components/Pages/Music/Music.jsx';
 import Settings from './Components/Pages/Settings/Settings.jsx';
 import DialogsContainer from './Components/Pages/Dialogs/DialogsContainer.jsx';
-import UsersContainer from './Components/Users/Users.jsx';
+import UsersContainer from './Components/Users/UsersContainer.jsx';
 
 import './App.css';
 

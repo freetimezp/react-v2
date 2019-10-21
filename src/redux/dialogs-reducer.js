@@ -47,13 +47,13 @@ export const sendMessageActionCreator = () => {
 	return {
 		type: SEND_MESSAGE
 	}
-}
+};
 
 export const updateNewMessageTextActionCreator = (newMessage) => {
 	return {
 		type: UPDATE_NEW_MESSAGE_TEXT,
 		newMessage: newMessage
 	}
-}
+};
 
 export default dialogsReducer;
