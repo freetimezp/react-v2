@@ -1,15 +1,9 @@
-.app-wrapper {
-
+* {
+  box-sizing: border-box;
 }
 
-.app-header {
-  background-color: #22BE1E;
-  max-height: 200px;
-}
-
-.app-header-img {
-  height: 100px;
-  width: 200px;
+img {
+  width: 100%;
 }
 
 .app-content-wrapper {
@@ -22,25 +16,3 @@ ul, li, a {
   list-style-type: none;
 }
 
-.app-main-list {
-  background-color: #22BE1E;
-  margin-right: 20px;
-  border: 1px solid red;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-content {
-  background-color: #22BE1E;
-  border: 1px solid red;
-  width: 100%;
-  min-height: 400px;
-  padding: 10px
-}
-
-.app-content-img {
-  max-height: 200px;
-  min-width: 100%;
-  border-radius: 10px;
-}
