@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/Header.jsx';
-import Mainlist from './components/Mainlist.jsx';
-import Profile from './components/Profile.jsx';
+import Header from './components/Header/Header.jsx';
+import Mainlist from './components/Mainlist/Mainlist.jsx';
+import Profile from './components/Profile/Profile.jsx';
 
 const App = () => {
   return (
