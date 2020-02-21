@@ -16,3 +16,9 @@ ul, li, a {
   list-style-type: none;
 }
 
+.content {
+  background-color: #22BE1E;
+  width: 100%;
+  min-height: 400px;
+  padding: 10px
+}
