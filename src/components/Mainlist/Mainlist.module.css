@@ -18,3 +18,7 @@
 .list a:last-child {
   margin-top: 40px;
 }
+
+.list a.active {
+  color: gold;
+}
