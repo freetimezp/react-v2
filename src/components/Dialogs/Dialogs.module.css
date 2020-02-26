@@ -22,8 +22,3 @@
 .dialog a {
 	color: white;
 }
-
-.dialog.active a {
-	font-weight: bold;
-	color: #EEC905;
-}

@@ -1,26 +1,13 @@
 import React from 'react';
 
 import classes from './Profile.module.css';
-import MyPosts from './MyPosts/MyPosts';
+import MyPosts from './MyPosts/MyPosts.jsx';
+import ProfileInfo from './ProfileInfo/ProfileInfo.jsx';
 
-const Profile = () => {
+const Profile = (props) => {
 	return (
     	<div>
-    		<div>
-	    		<img 
-	    			className={classes.img} 
-	    			src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKeAg6we76Eo8qIbNC275den4JCB-WozGwGAXzNClglpjTWJgT' 
-	    			alt='foto' 
-	    		/>
-    		</div>
-    		<div>
-    			<div>
-    				Avatar
-    			</div>
-    			<div>
-    				Description
-    			</div>
-    		</div>
+            <ProfileInfo />
             <MyPosts />
     	</div>
 		);
