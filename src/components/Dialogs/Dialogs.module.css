@@ -1,0 +1,29 @@
+.dialogs {
+	display: flex;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 20px;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.dialogs_items {
+	padding: 0 10px;
+	min-width: 30%;
+	border-right: 1px solid white;
+}
+
+.messages {
+	padding: 0 10px;
+}
+
+.dialog a {
+	color: white;
+}
+
+.dialog.active a {
+	font-weight: bold;
+	color: #EEC905;
+}
