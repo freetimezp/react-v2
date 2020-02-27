@@ -5,7 +5,7 @@ import classes from './Mainlist.module.css';
 import {NavLink} from "react-router-dom";
 
 
-const Mainlist = () => {
+const Mainlist = (props) => {
 	return (
     	<div className={classes.list}>
     		<NavLink to='/profile' activeClassName={classes.active} className={` ${classes.item} ${classes.active} `}>Profile</NavLink>

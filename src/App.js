@@ -11,7 +11,7 @@ import Settings from './components/Settings/Settings.jsx';
 
 import {Route,BrowserRouter} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
   	<BrowserRouter>
 	    <div className='app-wrapper'>

@@ -3,7 +3,14 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+  let postsData = [
+    {id: 1, message: 'Hi! How are you?', likesCount: 23, dislikesCount: 0},
+    {id: 2, message: 'Its my first post!', likesCount: 11, dislikesCount: 0},
+    {id: 3, message: 'Hello, everyone.', likesCount: 0, dislikesCount: 0}
+  ]
+
 	return (
       <div>
         <h3>My posts</h3>
@@ -16,9 +23,9 @@ const MyPosts = () => {
           </div>
         </div>
         <div className={classes.posts}>
-          <Post message='Hi! How are you?' likeCount='23' dislikeCount='0' />
-          <Post message='Its my first post!' likeCount='11' dislikeCount='0' />
-          <Post message='Hello, everyone.' likeCount='0' dislikeCount='0' />
+          <Post message={postsData[0].message} likesCount={postsData[0].likesCount} dislikesCount={postsData[0].dislikesCount} />
+          <Post message={postsData[1].message} likesCount={postsData[1].likesCount} dislikesCount={postsData[1].dislikesCount} />
+          <Post message={postsData[2].message} likesCount={postsData[2].likesCount} dislikesCount={postsData[2].dislikesCount} />
         </div>
       </div>
     );
