@@ -6,10 +6,14 @@ import Post from './Post/Post.jsx';
 const MyPosts = (props) => {
 
   let postsData = [
-    {id: 1, message: 'Hi! How are you?', likesCount: 23, dislikesCount: 0},
-    {id: 2, message: 'Its my first post!', likesCount: 11, dislikesCount: 0},
-    {id: 3, message: 'Hello, everyone.', likesCount: 0, dislikesCount: 0}
+    {id: 1, message: 'Hi! How are you?', likes: 23, dislikes: 0},
+    {id: 2, message: 'Its my first post!', likes: 11, dislikes: 0},
+    {id: 3, message: 'Hello, everyone.', likes: 0, dislikes: 0}
   ]
+
+  let postsElements = postsData
+      .map ( (post) => <Post message={post.message} likes={post.likes} dislikes={post.dislikes} />
+  );
 
 	return (
       <div>
@@ -23,9 +27,7 @@ const MyPosts = (props) => {
           </div>
         </div>
         <div className={classes.posts}>
-          <Post message={postsData[0].message} likesCount={postsData[0].likesCount} dislikesCount={postsData[0].dislikesCount} />
-          <Post message={postsData[1].message} likesCount={postsData[1].likesCount} dislikesCount={postsData[1].dislikesCount} />
-          <Post message={postsData[2].message} likesCount={postsData[2].likesCount} dislikesCount={postsData[2].dislikesCount} />
+          { postsElements }
         </div>
       </div>
     );
