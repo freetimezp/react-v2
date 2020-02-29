@@ -5,11 +5,7 @@ import Post from './Post/Post.jsx';
 
 const MyPosts = (props) => {
 
-  let postsData = [
-    {id: 1, message: 'Hi! How are you?', likes: 23, dislikes: 0},
-    {id: 2, message: 'Its my first post!', likes: 11, dislikes: 0},
-    {id: 3, message: 'Hello, everyone.', likes: 0, dislikes: 0}
-  ]
+  let postsData = props.postsData;
 
   let postsElements = postsData
       .map ( (post) => <Post message={post.message} likes={post.likes} dislikes={post.dislikes} />
