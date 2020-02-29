@@ -9,23 +9,13 @@ import Message from './Message/Message.jsx';
 
 
 const Dialogs = (props) => {
-	
-	let dialogsData = [
-		{id: 1, name: 'Andrew'},
-		{id: 2, name: 'Dmitry'},
-		{id: 3, name: 'Sveta'},
-		{id: 4, name: 'Sasha'}
-	];
+
+	let dialogsData = props.dialogsData;
+	let messagesData = props.messagesData;
 
 	let dialogsElements = dialogsData
 			.map( (dialog) => <DialogItem name={dialog.name} id={dialog.id} />
 	);
-
-	let messagesData = [
-		{id: 1, message: 'Hi!'},
-		{id: 2, message: 'How is your life?'},
-		{id: 3, message: 'Yo Yo'}
-	]
 
 	let messagesElements = messagesData
 			.map( (message) => <Message message={message.message} />

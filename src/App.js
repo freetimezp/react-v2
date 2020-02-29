@@ -13,6 +13,19 @@ import {Route,BrowserRouter} from "react-router-dom";
 
 const App = (props) => {
 
+	let dialogsData = [
+		{id: 1, name: 'Andrew'},
+		{id: 2, name: 'Dmitry'},
+		{id: 3, name: 'Sveta'},
+		{id: 4, name: 'Sasha'}
+	];
+
+	let messagesData = [
+		{id: 1, message: 'Hi!'},
+		{id: 2, message: 'How is your life?'},
+		{id: 3, message: 'Yo Yo'}
+	]
+
   return (
   	<BrowserRouter>
 	    <div className='app-wrapper'>
@@ -20,11 +33,11 @@ const App = (props) => {
 	    	<div className='app-content-wrapper'>
 	    		<Mainlist />
 	    		<div className='content'>
-	    			<Route path="/profile" component={Profile} />
-	    			<Route path="/dialogs" component={Dialogs} />
-	    			<Route path="/news" component={News} />
-	    			<Route path="/music" component={Music} />
-	    			<Route path="/settings" component={Settings} />
+	    			<Route path="/profile" render={ () => <Profile /> } />
+	    			<Route path="/dialogs" render={ () => <Dialogs dialogsData={dialogsData} messagesData={messagesData} /> } />
+	    			<Route path="/news" render={ () => <News /> } />
+	    			<Route path="/music" render={ () => <Music /> } />
+	    			<Route path="/settings" render={ () => <Settings /> } />
 	    		</div>
 	    	</div>
 	    </div>
