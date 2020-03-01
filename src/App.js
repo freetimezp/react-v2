@@ -13,9 +13,9 @@ import {Route,BrowserRouter} from "react-router-dom";
 
 const App = (props) => {
 
-	let dialogsData = props.dialogsData;
-	let messagesData = props.messagesData;
-  let postsData = props.postsData;
+	let dialogsData = props.state.dialogsPage.dialogsData;
+	let messagesData = props.state.dialogsPage.messagesData;
+  let postsData = props.state.profilePage.postsData;
 
   return (
   	<BrowserRouter>
