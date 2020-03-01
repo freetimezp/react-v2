@@ -1,0 +1,20 @@
+.friend_image img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 1px 2px 3px #539BEC;
+	cursor: pointer;
+}
+
+.friend_image img:hover {
+	box-shadow: 2px 3px 4px #0C4484;
+}
+
+.friend_item {
+	text-align: center;
+}
+
+.friend_name {
+	color: white;
+	font-size: 10px;
+}

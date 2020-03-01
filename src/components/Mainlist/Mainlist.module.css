@@ -1,10 +1,15 @@
-.list {
-  background-color: #22BE1E;
-  margin-right: 20px;
-  min-width: 200px;
+.list_wrapper {
   display: flex;
   flex-direction: column;
+  background-color: #22BE1E;
   padding: 10px;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
 }
 
 .item {
