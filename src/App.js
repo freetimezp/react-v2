@@ -15,14 +15,15 @@ const App = (props) => {
 
 	let dialogsData = props.state.dialogsPage.dialogsData;
 	let messagesData = props.state.dialogsPage.messagesData;
-  let postsData = props.state.profilePage.postsData;
+ let postsData = props.state.profilePage.postsData;
+ let friendsData = props.state.friendsPage.friendsData;
 
-  return (
+ return (
   	<BrowserRouter>
 	    <div className='app-wrapper'>
 	    	<Header />
 	    	<div className='app-content-wrapper'>
-	    		<Mainlist />
+	    		<Mainlist friendsData={friendsData} />
 	    		<div className='content'>
 	    			<Route path="/profile" render={ () => <Profile postsData={postsData} /> } />
 	    			<Route path="/dialogs" render={ () => <Dialogs dialogsData={dialogsData} messagesData={messagesData} /> } />

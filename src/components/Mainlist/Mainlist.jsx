@@ -8,6 +8,9 @@ import Friends from './Friends/Friends.jsx';
 
 
 const Mainlist = (props) => {
+
+  let friendsData = props.friendsData;
+
 	return (
 		<div className={classes.list_wrapper}>
     	<div className={classes.list}>
@@ -17,7 +20,7 @@ const Mainlist = (props) => {
     		<NavLink to='/music' activeClassName={classes.active} className={classes.item}>Music</NavLink>
     		<NavLink to='/settings' activeClassName={classes.active} className={classes.item}>Settings</NavLink>
     	</div>
-    	<Friends />
+    	<Friends friendsData={friendsData} />
     </div>
 		);
 }
