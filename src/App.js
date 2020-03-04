@@ -9,7 +9,7 @@ import News from './components/News/News.jsx';
 import Music from './components/Music/Music.jsx';
 import Settings from './components/Settings/Settings.jsx';
 
-import {Route,BrowserRouter} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 const App = (props) => {
 
@@ -19,7 +19,6 @@ const App = (props) => {
  let friendsData = props.state.friendsPage.friendsData;
 
  return (
-  	<BrowserRouter>
 	    <div className='app-wrapper'>
 	    	<Header />
 	    	<div className='app-content-wrapper'>
@@ -33,7 +32,7 @@ const App = (props) => {
 	    		</div>
 	    	</div>
 	    </div>
-    </BrowserRouter>
+
   );
 }
 
