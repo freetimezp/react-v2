@@ -10,3 +10,18 @@ textarea {
 	box-shadow: 1px 2px 3px;
 	margin-bottom: 10px;
 }
+
+button {
+	padding: 10px 20px;
+	border-radius: 4px;
+	background-color: #E05F89;
+	border: 1px solid #E05F89;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	background-color: #E51F5F;
+}
+
