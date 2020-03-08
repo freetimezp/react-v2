@@ -39,14 +39,23 @@ let state = {
 	}
 }
 
-export let addPost = (postMessage) => {
+export let addPost = (post) => {
 		let newPost = {
 			id: 5, 
-			message: postMessage,
+			message: post,
 			likes: 0,
 			dislikes: 0
 		};
 	  state.profilePage.postsData.push(newPost);
+	  rerenderEntireTree(state);
+}
+
+export let addMessage = (message) => {
+		let newMessage = {
+			id: 6, 
+			message: message
+		};
+	  state.dialogsPage.messagesData.push(newMessage);
 	  rerenderEntireTree(state);
 }
 
