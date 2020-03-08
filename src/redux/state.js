@@ -1,5 +1,8 @@
 import React from 'react';
 
+import {rerenderEntireTree} from "../render.js";
+
+
 let state = {
 	profilePage: {
 		postsData: [
@@ -34,6 +37,17 @@ let state = {
       name: 'Sveta'}
  	 ]
 	}
+}
+
+export let addPost = (postMessage) => {
+		let newPost = {
+			id: 5, 
+			message: postMessage,
+			likes: 0,
+			dislikes: 0
+		};
+	  state.profilePage.postsData.push(newPost);
+	  rerenderEntireTree(state);
 }
 
 export default state;

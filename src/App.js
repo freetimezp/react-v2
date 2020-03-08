@@ -18,13 +18,15 @@ const App = (props) => {
  let postsData = props.state.profilePage.postsData;
  let friendsData = props.state.friendsPage.friendsData;
 
+ let addPost = props.addPost;
+
  return (
 	    <div className='app-wrapper'>
 	    	<Header />
 	    	<div className='app-content-wrapper'>
 	    		<Mainlist friendsData={friendsData} />
 	    		<div className='content'>
-	    			<Route path="/profile" render={ () => <Profile postsData={postsData} /> } />
+	    			<Route path="/profile" render={ () => <Profile postsData={postsData} addPost={addPost} /> } />
 	    			<Route path="/dialogs" render={ () => <Dialogs dialogsData={dialogsData} messagesData={messagesData} /> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
