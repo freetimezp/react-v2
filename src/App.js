@@ -20,6 +20,7 @@ const App = (props) => {
 
   let addPost = props.addPost;
   let addMessage = props.addMessage;
+  let updateNewPostText = props.updateNewPostText;
 
   return (
 	    <div className='app-wrapper'>
@@ -29,10 +30,17 @@ const App = (props) => {
 	    		<div className='content'>
 	    			<Route 
 	    				path="/profile" 
-	    				render={ () => <Profile postsData={postsData} addPost={addPost} /> } />
+	    				render={ () => <Profile 
+	    													postsData={postsData} 
+	    													addPost={addPost} 
+	    													profilePage={props.state.profilePage} 
+	    													updateNewPostText ={updateNewPostText} /> } />
 	    			<Route 
 	    				path="/dialogs" 
-	    				render={ () => <Dialogs dialogsData={dialogsData} messagesData={messagesData} addMessage={addMessage} /> } />
+	    				render={ () => <Dialogs 
+	    													dialogsData={dialogsData} 
+	    													messagesData={messagesData} 
+	    													addMessage={addMessage} /> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
 	    			<Route path="/settings" render={ () => <Settings /> } />

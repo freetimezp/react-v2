@@ -1,3 +1,9 @@
+.item_wrapper {
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #0B8908;
+	padding-bottom: 3px;
+}
+
 .item {
 	display: flex;
 }

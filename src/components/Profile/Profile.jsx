@@ -12,8 +12,12 @@ const Profile = (props) => {
 
 	return (
     	<div>
-            <ProfileInfo />
-            <MyPosts postsData={postsData} addPost={addPost} />
+       	<ProfileInfo /> 
+        <MyPosts 
+        	postsData={ postsData } 
+        	addPost={ addPost } 
+        	newPostText={ props.profilePage.newPostText }
+        	updateNewPostText={ props.updateNewPostText } />
     	</div>
 		);
 }
