@@ -9,7 +9,7 @@ import state from "./redux/state.js";
 import {BrowserRouter} from "react-router-dom";
 import {addPost} from "./redux/state.js";
 import {addMessage} from "./redux/state.js";
-import {updateNewPostText} from "./redux/state.js";
+import {updateNewPostText,updateNewMessageText} from "./redux/state.js";
 import {subscribe} from "./redux/state.js";
 
 let rerenderEntireTree = (state) => {
@@ -19,7 +19,8 @@ let rerenderEntireTree = (state) => {
 			state={state} 
 			addPost={addPost} 
 			addMessage={addMessage}
-			updateNewPostText={updateNewPostText} />
+			updateNewPostText={updateNewPostText} 
+			updateNewMessageText={updateNewMessageText} />
 	</BrowserRouter>, document.getElementById('root'));
 }
 

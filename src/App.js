@@ -21,6 +21,7 @@ const App = (props) => {
   let addPost = props.addPost;
   let addMessage = props.addMessage;
   let updateNewPostText = props.updateNewPostText;
+  let updateNewMessageText = props.updateNewMessageText;
 
   return (
 	    <div className='app-wrapper'>
@@ -40,7 +41,9 @@ const App = (props) => {
 	    				render={ () => <Dialogs 
 	    													dialogsData={dialogsData} 
 	    													messagesData={messagesData} 
-	    													addMessage={addMessage} /> } />
+	    													addMessage={addMessage} 
+	    													dialogsPage={props.state.dialogsPage} 
+	    													updateNewMessageText={updateNewMessageText}/> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
 	    			<Route path="/settings" render={ () => <Settings /> } />

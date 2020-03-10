@@ -24,7 +24,8 @@ let state = {
 			{id: 1, message: 'Hi!'},
 			{id: 2, message: 'How is your life?'},
 			{id: 3, message: 'Yo Yo'}
-		]
+		],
+		newMessageText: 'Write here...'
 	},
 	friendsPage: {
 		friendsData: [
@@ -51,7 +52,6 @@ export const addPost = () => {
 	  state.profilePage.postsData.push(newPost);
 	  state.profilePage.newPostText = '';
 	  rerenderEntireTree(state);
-
 }
 
 export const updateNewPostText = (newText) => {
@@ -59,14 +59,21 @@ export const updateNewPostText = (newText) => {
 	  rerenderEntireTree(state);
 }
 
-export const addMessage = (message) => {
+export const addMessage = () => {
 		let newMessage = {
 			id: 6, 
-			message: message
+			message: state.dialogsPage.newMessageText
 		};
 	  state.dialogsPage.messagesData.push(newMessage);
+	  state.dialogsPage.newMessageText = '';
 	  rerenderEntireTree(state);
 }
+
+export const updateNewMessageText = (newText) => {
+	  state.dialogsPage.newMessageText = newText;
+	  rerenderEntireTree(state);
+}
+
 
 export const subscribe  = (observer) => {
 	rerenderEntireTree = observer;
