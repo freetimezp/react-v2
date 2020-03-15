@@ -4,29 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import state from "./redux/state.js";
-
+import store from "./redux/state.js";
 import {BrowserRouter} from "react-router-dom";
-import {addPost} from "./redux/state.js";
-import {addMessage} from "./redux/state.js";
-import {updateNewPostText,updateNewMessageText} from "./redux/state.js";
-import {subscribe} from "./redux/state.js";
+
 
 let rerenderEntireTree = (state) => {
 	ReactDOM.render(
 	<BrowserRouter>
 		<App 
 			state={state} 
-			addPost={addPost} 
-			addMessage={addMessage}
-			updateNewPostText={updateNewPostText} 
-			updateNewMessageText={updateNewMessageText} />
+			addPost={store.addPost.bind(store)} 
+			addMessage={store.addMessage.bind(store)}
+			updateNewPostText={store.updateNewPostText.bind(store)} 
+			updateNewMessageText={store.updateNewMessageText.bind(store)} />
 	</BrowserRouter>, document.getElementById('root'));
 }
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
 
 
 // If you want your app to work offline and load faster, you can change
