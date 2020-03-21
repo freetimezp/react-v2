@@ -18,7 +18,6 @@ const App = (props) => {
   let postsData = props.state.profilePage.postsData;
   let friendsData = props.state.friendsPage.friendsData;
 
-  let addPost = props.addPost;
   let addMessage = props.addMessage;
   let updateNewPostText = props.updateNewPostText;
   let updateNewMessageText = props.updateNewMessageText;
@@ -33,17 +32,15 @@ const App = (props) => {
 	    				path="/profile" 
 	    				render={ () => <Profile 
 	    													postsData={postsData} 
-	    													addPost={addPost} 
-	    													profilePage={props.state.profilePage} 
-	    													updateNewPostText ={updateNewPostText} /> } />
+	    													dispatch={props.dispatch} 
+	    													profilePage={props.state.profilePage} /> } />
 	    			<Route 
 	    				path="/dialogs" 
 	    				render={ () => <Dialogs 
 	    													dialogsData={dialogsData} 
 	    													messagesData={messagesData} 
-	    													addMessage={addMessage} 
-	    													dialogsPage={props.state.dialogsPage} 
-	    													updateNewMessageText={updateNewMessageText}/> } />
+	    													dispatch={props.dispatch} 
+	    													dialogsPage={props.state.dialogsPage} /> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
 	    			<Route path="/settings" render={ () => <Settings /> } />
