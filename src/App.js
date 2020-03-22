@@ -18,10 +18,6 @@ const App = (props) => {
   let postsData = props.state.profilePage.postsData;
   let friendsData = props.state.friendsPage.friendsData;
 
-  let addMessage = props.addMessage;
-  let updateNewPostText = props.updateNewPostText;
-  let updateNewMessageText = props.updateNewMessageText;
-
   return (
 	    <div className='app-wrapper'>
 	    	<Header />
