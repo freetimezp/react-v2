@@ -59,35 +59,4 @@ let store = {
 		}
 }
 
-const ADD_POST = 'ADD-POST';
-export const addPostActionCreator = () => {
-  return {
-    type: ADD_POST
-  }
-}
-
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-export const updateNewPostTextActionCreator = (text) => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newText: text
-  }
-}
-
-const ADD_MESSAGE = 'ADD-MESSAGE';
-export const addMessageActionCreator = () => {
-  return {
-    type: ADD_MESSAGE
-  }
-}
-
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
-export const updateNewMessageTextActionCreator = (text) => {
-  return {
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    newText: text
-  }
-}
-
-
 export default store;
