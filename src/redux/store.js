@@ -2,7 +2,6 @@ import profileReducer from './profile-reducer.js';
 import dialogsReducer from './dialogs-reducer.js';
 import friendsReducer from './friends-reducer.js';
 
-
 let store = {
 		_state: {
 			profilePage: {
