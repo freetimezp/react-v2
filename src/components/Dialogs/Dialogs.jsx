@@ -9,30 +9,25 @@ import Message from './Message/Message.jsx';
 
 import {addMessageActionCreator,updateNewMessageTextActionCreator} from './../../redux/dialogs-reducer.js';
 
-
 const Dialogs = (props) => {
 
-	let dialogsData = props.dialogsData;
-	let messagesData = props.messagesData;
+	let state = props.dialogsPage;
 
-	let dialogsElements = dialogsData
-			.map( (dialog) => <DialogItem name={dialog.name} id={dialog.id} />
-	);
+	let dialogsElements = state.dialogsData
+			.map( (dialog) => <DialogItem name={dialog.name} id={dialog.id} /> );
 
-	let messagesElements = messagesData
-			.map( (message) => <Message message={message.message} />
-	);
+	let messagesElements = state.messagesData
+			.map( (message) => <Message message={message.message} /> );
 
 	let newMessageElement = React.createRef();
 
   let addNewMessage = () => {
-   props.dispatch( addMessageActionCreator() );
+  	props.addMessage();
   }
 
-  let changeMessage = () => {
-    let text = newMessageElement.current.value;
-    let action = updateNewMessageTextActionCreator(text);
-    props.dispatch(action);
+  let changeMessage = (newMessageElement) => {
+    let text = newMessageElement.target.value;
+    props.updateNewMessageText(text)
   }
 
 	return (
