@@ -13,13 +13,11 @@ import {Route} from "react-router-dom";
 
 const App = (props) => {
 
-  let friendsData = props.state.friendsPage.friendsData;
-
   return (
 	    <div className='app-wrapper'>
 	    	<Header />
 	    	<div className='app-content-wrapper'>
-	    		<Mainlist friendsData={friendsData} />
+	    		<Mainlist friendsData={props.state.friendsPage.friendsData} />
 	    		<div className='content'>
 	    			<Route 
 	    				path="/profile" 

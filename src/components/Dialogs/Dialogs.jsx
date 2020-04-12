@@ -11,12 +11,10 @@ import {addMessageActionCreator,updateNewMessageTextActionCreator} from './../..
 
 const Dialogs = (props) => {
 
-	let state = props.dialogsPage;
-
-	let dialogsElements = state.dialogsData
+	let dialogsElements = props.dialogsPage.dialogsData
 			.map( (dialog) => <DialogItem name={dialog.name} id={dialog.id} /> );
 
-	let messagesElements = state.messagesData
+	let messagesElements = props.dialogsPage.messagesData
 			.map( (message) => <Message message={message.message} /> );
 
 	let newMessageElement = React.createRef();

@@ -7,14 +7,16 @@ import * as serviceWorker from './serviceWorker';
 import store from "./redux/redux-store.js";
 import {BrowserRouter} from "react-router-dom";
 
+import {Provider} from 'react-redux';
+
 
 let rerenderEntireTree = (state) => {
 	ReactDOM.render(
 	<BrowserRouter>
-		<App 
-		  store={store}
-			state={state} 
-			dispatch={store.dispatch.bind(store)} />
+		<Provider store={store}>
+			<App 
+			  state={store.getState()} />
+		</Provider>
 	</BrowserRouter>, document.getElementById('root'));
 }
 
