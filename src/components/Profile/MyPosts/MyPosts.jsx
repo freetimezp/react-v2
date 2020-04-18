@@ -10,7 +10,7 @@ const MyPosts = (props) => {
   let postsData = props.postsData;
 
   let postsElements = postsData
-      .map ( (post) => <Post message={post.message} likes={post.likes} dislikes={post.dislikes} />
+      .map ( (post) => <Post message={post.message} key={post.id} likes={post.likes} dislikes={post.dislikes} />
   );
 
   let newPostElement = React.createRef();
