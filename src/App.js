@@ -8,6 +8,7 @@ import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
 import News from './components/News/News.jsx';
 import Music from './components/Music/Music.jsx';
 import Settings from './components/Settings/Settings.jsx';
+import UsersContainer from './components/Users/UsersContainer.jsx';
 
 import {Route} from "react-router-dom";
 
@@ -27,6 +28,9 @@ const App = (props) => {
 	    				render={ () => <DialogsContainer store={props.store} /> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
+	    			<Route 
+	    				path="/users" 
+	    				render={ () => <UsersContainer /> } />
 	    			<Route path="/settings" render={ () => <Settings /> } />
 	    		</div>
 	    	</div>
