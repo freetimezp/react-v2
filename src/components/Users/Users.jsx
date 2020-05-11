@@ -7,18 +7,19 @@ import userPhoto from '../../assets/images/user.jpg';
 
 // API = https://social-network.samuraijs.com/api/1.0
 
-let Users = (props) => {
-
-	if (props.users.length === 0) {
-    axios.get("https://social-network.samuraijs.com/api/1.0/users")
+class Users extends React.Component {
+	
+	componentDidMount() {
+		axios.get("https://social-network.samuraijs.com/api/1.0/users")
 	    .then(response => {
-	    	props.setUsers(response.data.items);
-	    });
+	    	this.props.setUsers(response.data.items);
+    });
 	}
 
-	return <div>
+	render() {
+		return <div>
 		{
-			props.users.map( user => 
+			this.props.users.map( user => 
 				<div key={user.id} className={classes.mainWrapper}>
 					<div className={classes.userWrapper}>
 						<div className={classes.photo} >
@@ -26,8 +27,8 @@ let Users = (props) => {
 						</div>
 						<div className={classes.btn}>
 							{ user.followed 
-								? <button onClick={ () => {props.unfollow(user.id)} }>Unfollow</button> 
-								: <button onClick={ () => {props.follow(user.id)} }>Follow</button> }
+								? <button onClick={ () => {this.props.unfollow(user.id)} }>Unfollow</button> 
+								: <button onClick={ () => {this.props.follow(user.id)} }>Follow</button> }
 						</div>
 					</div>
 					<div className={classes.userBlockWrapper} >
@@ -41,8 +42,12 @@ let Users = (props) => {
 						</div>
 					</div>
 				</div>) 
-		}
-	</div>
+			}
+		</div>
+	}
 }
+
+
+
 
 export default Users;
