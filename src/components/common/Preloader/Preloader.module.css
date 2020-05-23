@@ -1,0 +1,8 @@
+.preloader {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-height: 100vh;
+	border-radius: 40px 0 40px 0;
+	opacity: 0.2;
+}
