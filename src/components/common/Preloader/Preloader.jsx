@@ -10,8 +10,6 @@ let Preloader = (props) => {
 	</div>
 }
 
-
-
 export default Preloader;
 
 

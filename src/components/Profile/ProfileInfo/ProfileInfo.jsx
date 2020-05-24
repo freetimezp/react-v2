@@ -2,7 +2,14 @@ import React from 'react';
 
 import classes from './ProfileInfo.module.css';
 
+import Preloader from './../../common/Preloader/Preloader.jsx';
+
 const ProfileInfo = (props) => {
+
+  if (!props.profile) {
+    return <Preloader />
+  }
+
 	return (
     	<div>
     		<div>
@@ -14,15 +21,16 @@ const ProfileInfo = (props) => {
     		</div>
     		<div className={classes.profile_block}>
     			<div className={classes.profile_image}>
-    				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJj5L0qAknvGSSfpRKvMEo0UiAdyJgq-VpN6VwoOeqHrHdGL4r" />
+    				<img src={props.profile.photos.large} />
     			</div>
     			<div>
-    				<h3 className={classes.profile_title}>Nastya Ch.</h3>
+    				<h3 className={classes.profile_title}>{props.profile.fullName}</h3>
             <div className={classes.profile_text}>
-              <div>Date of Birth: 8 may</div>
-              <div>City: Zpcity</div>
-              <div>Education: traveler</div>
-              <div>web: www.sea.ua</div>
+              <div>About me: {props.profile.aboutMe}</div>
+              <div>Contacts: {props.profile.contacts.vk}</div>
+              <div>{props.profile.contacts.twitter}</div>
+              <div>{props.profile.contacts.instagram}</div>
+              <div>web: {props.profile.contacts.github}</div>
             </div>
     			</div>
     		</div>
