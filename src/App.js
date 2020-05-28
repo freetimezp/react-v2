@@ -21,15 +21,15 @@ const App = (props) => {
 	    		<Mainlist friendsData={props.state.friendsPage.friendsData} />
 	    		<div className='content'>
 	    			<Route 
-	    				path="/profile" 
+	    				path='/profile/:userId?'
 	    				render={ () => <ProfileContainer store={props.store} /> } />
 	    			<Route 
-	    				path="/dialogs" 
+	    				path='/dialogs' 
 	    				render={ () => <DialogsContainer store={props.store} /> } />
 	    			<Route path="/news" render={ () => <News /> } />
 	    			<Route path="/music" render={ () => <Music /> } />
 	    			<Route 
-	    				path="/users" 
+	    				path='/users'
 	    				render={ () => <UsersContainer /> } />
 	    			<Route path="/settings" render={ () => <Settings /> } />
 	    		</div>
