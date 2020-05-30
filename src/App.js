@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/Header/Header.jsx';
+import HeaderContainer from './components/Header/HeaderContainer.jsx';
 import Mainlist from './components/Mainlist/Mainlist.jsx';
 import ProfileContainer from './components/Profile/ProfileContainer.jsx';
 import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
@@ -16,7 +16,7 @@ const App = (props) => {
 
   return (
 	    <div className='app-wrapper'>
-	    	<Header />
+	    	<HeaderContainer />
 	    	<div className='app-content-wrapper'>
 	    		<Mainlist friendsData={props.state.friendsPage.friendsData} />
 	    		<div className='content'>

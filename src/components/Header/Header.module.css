@@ -1,9 +1,19 @@
 .header {
   background-color: #22BE1E;
   max-height: 200px;
+  display: flex;
 }
 
 .img {
   height: 100px;
   width: 200px;
 }
+
+.authBlock {
+	margin-left: auto;
+	font-size: 30px;
+	color: white;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
