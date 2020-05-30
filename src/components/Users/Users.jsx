@@ -1,4 +1,5 @@
 import React from 'react';
+import * as axios from 'axios';
 import {NavLink} from 'react-router-dom';
 
 import classes from './Users.module.css';
@@ -30,8 +31,32 @@ let Users = (props) => {
 						</div>
 						<div className={classes.btn}>
 							{ user.followed 
-								? <button onClick={ () => {props.unfollow(user.id)} }>Unfollow</button> 
-								: <button onClick={ () => {props.follow(user.id)} }>Follow</button> }
+								? <button onClick={ () => {
+										axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
+											withCredentials: true,
+											headers: {
+												"API-KEY": "72a23f36-c272-4944-ad58-057cbee638af"
+											}
+										})
+									    .then(response => {
+									    	if (response.data.resultCode === 0) {
+													props.unfollow(user.id);
+									    	}
+								   		}); 
+									} }>Unfollow</button> 
+								: <button onClick={ () => {
+										axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
+											withCredentials: true,
+											headers: {
+												"API-KEY": "72a23f36-c272-4944-ad58-057cbee638af"
+											}
+										})
+									    .then(response => {
+									    	if (response.data.resultCode === 0) {
+									    		props.follow(user.id);
+									    	}
+								    	});
+									} }>Follow</button> }
 						</div>
 					</div>
 					<div className={classes.userBlockWrapper} >
