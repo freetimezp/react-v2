@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
+import {compose} from 'redux';
 
 import {follow, unfollow, setCurrentPage, 
   toggleFollowingProgress, getUsers} from './../../redux/users-reducer.js';
@@ -29,12 +30,10 @@ class UsersContainer extends React.Component {
 			onPageChanged = {this.onPageChanged}
 			unfollow = {this.props.unfollow}
 			follow = {this.props.follow}
-   		followingInProgress = {this.props.followingInProgress} /> 
+   	  followingInProgress = {this.props.followingInProgress} /> 
 		</>
 	}
 }
-
-let AuthRedirectComponent = withAuthRedirect(UsersContainer);
 
 const mapStateToProps = (state) => {
 	return {
@@ -47,7 +46,10 @@ const mapStateToProps = (state) => {
 	}
 } 
 
-export default connect(mapStateToProps, 
-	{ follow, unfollow,	setCurrentPage,	toggleFollowingProgress, getUsers }) (AuthRedirectComponent);
+export default compose(
+	connect(mapStateToProps, 
+	{ follow, unfollow,	setCurrentPage,	toggleFollowingProgress, getUsers }),
+	withAuthRedirect
+)(UsersContainer);
 
 
