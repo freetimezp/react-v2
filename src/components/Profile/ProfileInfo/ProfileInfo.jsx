@@ -26,7 +26,9 @@ const ProfileInfo = (props) => {
   			</div>
   			<div>
   				<h3 className={classes.profile_title}>{props.profile.fullName}</h3>
-          <ProfileStatus status={"My new status!!! Yo!"} />
+          <ProfileStatus 
+            status={props.status}
+            updateStatus={props.updateStatus} />
           <div className={classes.profile_text}>
             <div>About me: {props.profile.aboutMe}</div>
             <div>Contacts: {props.profile.contacts.vk}</div>
