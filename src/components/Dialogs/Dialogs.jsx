@@ -5,6 +5,8 @@ import classes from './Dialogs.module.css';
 
 import DialogItem from './DialogItem/DialogItem.jsx';
 import Message from './Message/Message.jsx';
+import {required, maxLengthCreator} from './../../utils/validators/validators.js';
+import {Textarea} from './../common/FormsControls/FormsControls.jsx'; 
 
 const Dialogs = (props) => {
 
@@ -36,11 +38,17 @@ const Dialogs = (props) => {
 		);
 }
 
+const maxLength100 = maxLengthCreator(100);
+
 const AddMessageForm = (props) => {
 	return (
   	<form onSubmit={props.handleSubmit}>
   		<div>
-  			<Field component={"textarea"} name={"newMessageBody"} placeholder={"Enter your message"} />
+  			<Field 
+  				component={Textarea} 
+  				name={"newMessageBody"} 
+  				placeholder={"Enter your message"}
+  				validate={[required, maxLength100]} />
       </div>
       <div>
         <button>Add message</button>
