@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Dialogs from './Dialogs.jsx';
-import {addMessageActionCreator,updateNewMessageTextActionCreator} from './../../redux/dialogs-reducer.js';
+import {addMessageActionCreator} from './../../redux/dialogs-reducer.js';
 
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
@@ -18,11 +18,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
 	return {
-		addMessage: () => {
-			dispatch(addMessageActionCreator());
-		},
-		updateNewMessageText: (text) => {
-			dispatch(updateNewMessageTextActionCreator(text));
+		addMessage: (newMessageBody) => {
+			dispatch(addMessageActionCreator(newMessageBody));
 		}
 	}
 }
