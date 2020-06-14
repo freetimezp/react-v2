@@ -9,6 +9,7 @@ import dialogsReducer from './dialogs-reducer.js';
 import friendsReducer from './friends-reducer.js';
 import usersReducer from './users-reducer.js';
 import authReducer from './auth-reducer.js';
+import appReducer from './app-reducer.js';
 
 let reducers = combineReducers({
 	profilePage: profileReducer,
@@ -16,7 +17,8 @@ let reducers = combineReducers({
 	friendsPage: friendsReducer,
 	usersPage: usersReducer,
 	auth: authReducer,
-	form: formReducer
+	form: formReducer,
+	app: appReducer
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
