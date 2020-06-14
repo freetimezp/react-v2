@@ -8,6 +8,8 @@ import {required, maxLengthCreator} from './../../utils/validators/validators.js
 import {Input} from './../common/FormsControls/FormsControls.jsx';
 import {login} from './../../redux/auth-reducer.js'; 
 
+import classes from './Login.module.css';
+
 const maxLength30 = maxLengthCreator(30);
 
 const LoginForm = (props) => {
@@ -34,6 +36,7 @@ const LoginForm = (props) => {
 					name={"rememberMe"} 
 					component={Input} />Remember me
 			</div>
+			{ props.error && <div className={classes.formSummeryError}>{props.error}</div> }
 			<div>
 				<button>Login</button>
 			</div>					
