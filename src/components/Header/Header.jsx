@@ -12,7 +12,12 @@ const Header = (props) => {
     			src='https://pngimg.com/uploads/fire/fire_PNG6010.png' 
     			alt='logo' />
     		<div className={classes.authBlock}>
-    			{ props.isAuth ? props.login : <NavLink to={'/login'}>Login</NavLink>	}
+    			{ props.isAuth 
+            ? <div>
+                <div>{props.login}</div>
+                <button onClick={props.logout}>Logout</button>
+              </div>
+            : <NavLink to={'/login'}>Login</NavLink>	}
     		</div>
     	</div>
 		);
