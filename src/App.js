@@ -4,6 +4,7 @@ import './App.css';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
+import {Route} from "react-router-dom";
 
 import HeaderContainer from './components/Header/HeaderContainer.jsx';
 import Mainlist from './components/Mainlist/Mainlist.jsx';
@@ -16,9 +17,6 @@ import UsersContainer from './components/Users/UsersContainer.jsx';
 import Login from './components/Login/Login.jsx';
 import Preloader from './components/common/Preloader/Preloader.jsx';
 import {initializeApp} from './redux/app-reducer.js';
-
-
-import {Route} from "react-router-dom";
 
 class App extends React.Component { 
 	componentDidMount() {
