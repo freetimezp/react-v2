@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import {reduxForm, Field} from 'redux-form';
 import {required, maxLengthCreator} from './../../../utils/validators/validators.js';
 import {Textarea} from './../../common/FormsControls/FormsControls.jsx'; 
@@ -6,11 +6,7 @@ import {Textarea} from './../../common/FormsControls/FormsControls.jsx';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
-class MyPosts extends React.Component {
- 
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps != this.props || nextState != this.state;
-  };
+class MyPosts extends PureComponent {
 
   render() {
     
