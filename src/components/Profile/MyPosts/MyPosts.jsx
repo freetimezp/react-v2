@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import {reduxForm, Field} from 'redux-form';
 import {required, maxLengthCreator} from './../../../utils/validators/validators.js';
 import {Textarea} from './../../common/FormsControls/FormsControls.jsx'; 
@@ -6,33 +6,32 @@ import {Textarea} from './../../common/FormsControls/FormsControls.jsx';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
-class MyPosts extends PureComponent {
+const MyPosts = React.memo( (props) => {
 
-  render() {
-    
-      let postsData = this.props.postsData;
+  console.log("render");
 
-      let postsElements = postsData
-          .map ( (post) => <Post message={post.message} key={post.id} likes={post.likes} dislikes={post.dislikes} />
-      );
+  let postsData = props.postsData;
 
-      let newPostElement = React.createRef();
+  let postsElements = postsData
+      .map ( (post) => <Post message={post.message} key={post.id} likes={post.likes} dislikes={post.dislikes} />
+  );
 
-      let addNewPost = (values) => {
-        this.props.addNewPost(values.newPostText);
-      }
+  let newPostElement = React.createRef();
 
-    	return (
-          <div>
-            <h3>My posts</h3>
-            <AddNewPostFormRedux onSubmit={addNewPost} />
-            <div className={classes.posts}>
-              { postsElements }
-            </div>
-          </div>
-        );
+  let addNewPost = (values) => {
+    props.addNewPost(values.newPostText);
   }
-}
+
+	return (
+      <div>
+        <h3>My posts</h3>
+        <AddNewPostFormRedux onSubmit={addNewPost} />
+        <div className={classes.posts}>
+          { postsElements }
+        </div>
+      </div>
+    );
+});
 
 const maxLength10 = maxLengthCreator(10);
 
