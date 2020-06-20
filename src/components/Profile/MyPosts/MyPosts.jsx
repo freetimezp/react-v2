@@ -6,15 +6,13 @@ import {Textarea} from './../../common/FormsControls/FormsControls.jsx';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
-const MyPosts = React.memo( (props) => {
+const MyPosts = (props) => {
 
-  console.log("render");
-
-  let postsData = props.postsData;
+  let postsData = [...props.postsData];
 
   let postsElements = postsData
-      .map ( (post) => <Post message={post.message} key={post.id} likes={post.likes} dislikes={post.dislikes} />
-  );
+    .map( (post) => <Post message={post.message} key={post.id} likes={post.likes} dislikes={post.dislikes} />)
+    .reverse();
 
   let newPostElement = React.createRef();
 
@@ -31,7 +29,7 @@ const MyPosts = React.memo( (props) => {
         </div>
       </div>
     );
-});
+}
 
 const maxLength10 = maxLengthCreator(10);
 
