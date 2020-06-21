@@ -4,17 +4,17 @@ import {reduxForm, Field} from "redux-form";
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
-import {required, maxLengthCreator} from './../../utils/validators/validators.js';
-import {Input} from './../common/FormsControls/FormsControls.jsx';
-import {login} from './../../redux/auth-reducer.js'; 
+import {required, maxLengthCreator} from '../../utils/validators/validators.js';
+import {Input} from '../common/FormsControls/FormsControls.jsx';
+import {login} from '../../redux/auth-reducer.js';
 
 import classes from './Login.module.css';
 
 const maxLength30 = maxLengthCreator(30);
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
 	return (
-		<form onSubmit={props.handleSubmit}>
+		<form onSubmit={handleSubmit}>
 			<div>
 				<Field 
 					placeholder={"Your email"} 
@@ -36,7 +36,7 @@ const LoginForm = (props) => {
 					name={"rememberMe"} 
 					component={Input} />Remember me
 			</div>
-			{ props.error && <div className={classes.formSummeryError}>{props.error}</div> }
+			{ error && <div className={classes.formSummeryError}>{error}</div> }
 			<div>
 				<button>Login</button>
 			</div>					

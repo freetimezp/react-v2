@@ -1,0 +1,36 @@
+.mainWrapper {
+    display: flex;
+}
+
+.photo img {
+    max-width: 80px;
+    max-height: 80px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px 0 20px 0
+}
+
+.userWrapper {
+    max-width: 200px;
+}
+
+.userBlockWrapper {
+    width: 400px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button {
+    min-width: 100px;
+    margin-right: auto;
+}
+
+.userLocation {
+    text-align: right;
+}
+
+.selectedPage {
+    font-weight: 700;
+    font-size: 20px;
+}
