@@ -1,4 +1,4 @@
-import {usersAPI} from './../api/api.js';
+import {usersAPI} from '../api/api.js';
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -45,33 +45,33 @@ const usersReducer = (state = initialState, action) => {
 				...state,
 				users: action.users
 			}
-		};
+		}
 		case SET_CURRENT_PAGE: {
 			return {
 				...state,
 				currentPage: action.currentPage
 			}
-		};
+		}
 		case SET_TOTAL_USERS_COUNT: {
 			return {
 				...state,
 				totalUsersCount: action.count
 			}
-		};
+		}
 		case TOGGLE_IS_FETCHING: {
 			return {
 				...state,
 				isFetching: action.isFetching
 			}
-		};
+		}
 		case TOGGLE_IS_FOLLOWING_PROGRESS: {
 			return {
 				...state,
 				followingInProgress: action.isFetching 
 					? [...state.followingInProgress, action.userId]
-					: state.followingInProgress.filter(id => id != action.userId)
+					: state.followingInProgress.filter(id => id !== action.userId)
 			}
-		};
+		}
 		default:
 		  return state;
 	}

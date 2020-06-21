@@ -1,4 +1,4 @@
-import {usersAPI, profileAPI} from './../api/api.js';
+import {usersAPI, profileAPI} from '../api/api.js';
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
