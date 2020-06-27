@@ -1,16 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 import {compose} from 'redux';
 
 import {follow, unfollow, setCurrentPage, 
-  toggleFollowingProgress, requestUsers} from './../../redux/users-reducer.js';
-import {withAuthRedirect} from './../../hoc/withAuthRedirect.js';
+  toggleFollowingProgress, requestUsers} from '../../redux/users-reducer.js';
+import {withAuthRedirect} from '../../hoc/withAuthRedirect.js';
 import Users from './Users.jsx';
 import Preloader from './../common/Preloader/Preloader.jsx';
 
 import {getUsers, getPageSize, getTotalUsersCount, getCurrentPage,
-	getIsFetching, getFollowingInProgress} from './../../redux/users-selectors.js';
+	getIsFetching, getFollowingInProgress} from '../../redux/users-selectors.js';
 
 class UsersContainer extends React.Component {
 	
@@ -38,16 +37,6 @@ class UsersContainer extends React.Component {
 	}
 }
 
-// const mapStateToProps = (state) => {
-// 	return {
-// 		users: state.usersPage.users,
-// 		pageSize: state.usersPage.pageSize,
-// 		totalUsersCount: state.usersPage.totalUsersCount,
-// 		currentPage: state.usersPage.currentPage,
-// 		isFetching: state.usersPage.isFetching,
-//  	followingInProgress: state.usersPage.followingInProgress
-// 	}
-// } 
 
 const mapStateToProps = (state) => {
 	return {

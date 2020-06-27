@@ -1,3 +1,7 @@
+:root {
+    --background-color: #22BE1E;
+}
+
 .mainWrapper {
     display: flex;
 }
@@ -33,4 +37,38 @@
 .selectedPage {
     font-weight: 700;
     font-size: 20px;
+}
+
+.paginator {
+    margin: 10px;
+}
+
+.pageNumber {
+    padding: 2px;
+    margin: 0 1px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    border-bottom: 2px solid #067911;
+}
+
+.btnPaginator {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #109E1D;
+  font-weight: 700;
+  border: 1px solid #109E1D;
+  box-shadow: 1px 1px 5px #109E1D;
+}
+
+.btnPaginator:hover {
+	background-color: #067911;
+	border: 1px solid #067911;
 }
