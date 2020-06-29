@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import classes from './Paginator.module.css';
 
-let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 10, ...props}) => {
+let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 30, ...props}) => {
 
     let pagesCount = Math.ceil(totalUsersCount / pageSize);
     let pages = [];

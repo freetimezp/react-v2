@@ -7,9 +7,6 @@ import {compose} from 'redux';
 
 import HeaderContainer from './components/Header/HeaderContainer.jsx';
 import UsersContainer from './components/Users/UsersContainer.jsx';
-import ProfileContainer from './components/Profile/ProfileContainer.jsx';
-import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
-
 import Mainlist from './components/Mainlist/Mainlist.jsx';
 import News from './components/News/News.jsx';
 import Music from './components/Music/Music.jsx';
@@ -19,9 +16,12 @@ import Preloader from './components/common/Preloader/Preloader.jsx';
 
 import {initializeApp} from './redux/app-reducer.js';
 
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer.jsx'));
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer.jsx'));
+
 class App extends React.Component {
     componentDidMount() {
-        this.props.initializeApp();
+      this.props.initializeApp();
     }
 
     render() {
@@ -34,12 +34,14 @@ class App extends React.Component {
                 <div className='app-content-wrapper'>
                     <Mainlist friendsData={this.props.state.friendsPage.friendsData}/>
                     <div className='content'>
+                    	<React.Suspense fallback={<Preloader />}>
                         <Route
                             path='/profile/:userId?'
                             render={() => <ProfileContainer/>}/>
                         <Route
                             path='/dialogs'
                             render={() => <DialogsContainer/>}/>
+                      </React.Suspense>
                         <Route path="/news" render={() => <News/>}/>
                         <Route path="/music" render={() => <Music/>}/>
                         <Route path="/login" render={() => <Login/>}/>
@@ -47,6 +49,7 @@ class App extends React.Component {
                             path='/users'
                             render={() => <UsersContainer/>}/>
                         <Route path="/settings" render={() => <Settings/>}/>
+
                     </div>
                 </div>
             </div>
