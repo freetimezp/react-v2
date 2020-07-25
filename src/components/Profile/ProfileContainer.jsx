@@ -8,7 +8,8 @@ import {getUserProfile, getStatus, updateStatus} from '../../redux/profile-reduc
 import {withAuthRedirect} from '../../hoc/withAuthRedirect.js';
 
 class ProfileContainer extends React.Component {
-    componentDidMount() {
+
+    refreshrofile() {
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = this.props.autorizedUserId;
@@ -18,6 +19,16 @@ class ProfileContainer extends React.Component {
         }
         this.props.getUserProfile(userId);
         this.props.getStatus(userId);
+    }
+
+    componentDidMount() {
+        this.refreshrofile();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId) {
+            this.refreshrofile();
+        }
     }
 
     render() {
