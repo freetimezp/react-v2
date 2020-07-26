@@ -21,9 +21,18 @@
 .profile_title {
 	margin: 0 0 10px 0;
 	color: #24550E;
+	display: block;
 }
 
 .profile_text {
 	font-size: 14px;
 	color: #24550E;
+}
+
+.contactWrapper {
+	margin-bottom: 20px;
+}
+
+.contact {
+	margin-left: 10px;
 }
