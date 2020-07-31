@@ -4,6 +4,7 @@ import classes from './ProfileInfo.module.css';
 
 import Preloader from './../../common/Preloader/Preloader.jsx';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks.jsx';
+import ProfileDataForm from "./ProfileDataForm";
 
 import userPhoto from '../../../assets/images/user.jpg';
 
@@ -84,13 +85,7 @@ const ProfileData = (props) => {
     );
 }
 
-const ProfileDataForm = (props) => {
-    return (
-        <div>
-            Form
-        </div>
-    );
-}
+
 
 const Contact = ({contactTitle, contactValue}) => {
     return (
