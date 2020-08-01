@@ -4,11 +4,11 @@ import {createField, Input, Textarea} from "../../common/FormsControls/FormsCont
 import {reduxForm} from "redux-form";
 
 
-const ProfileDataForm = (props) => {
+const ProfileDataForm = ({handleSubmit, profile}) => {
     return (
-        <form>
+        <form onSubmit={ handleSubmit }>
             <div>
-                <h3 className={classes.profile_title}>{props.profile.fullName}</h3>
+                <h3 className={classes.profile_title}>{profile.fullName}</h3>
             </div>
             <div className={classes.profile_text}>
                 <div>
