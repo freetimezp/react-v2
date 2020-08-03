@@ -4,7 +4,7 @@ import {createField, Input, Textarea} from "../../common/FormsControls/FormsCont
 import {reduxForm} from "redux-form";
 
 
-const ProfileDataForm = ({handleSubmit, profile}) => {
+const ProfileDataForm = ({handleSubmit, profile, error}) => {
     return (
         <form onSubmit={ handleSubmit }>
             <div>
@@ -23,6 +23,14 @@ const ProfileDataForm = ({handleSubmit, profile}) => {
                 <div>
                     My professional skills: {createField("My professional skills", "lookingForAJobDescription", [], Textarea)}
                 </div>
+                <div className={classes.contactWrapper}>
+                    Contacts: {Object.keys(profile.contacts).map(key => {
+                    return <div key={key} className={classes.contact}>
+                        <span>{key}: {createField(key + " link", "contacts." + key, [], Input)}</span>
+                    </div>
+                })}
+                </div>
+                { error && <div className={classes.formSummeryError}>{error}</div> }
                 <div>
                     <button>Save profile info</button>
                 </div>
