@@ -15,6 +15,7 @@ import Login from './components/Login/Login.jsx';
 import Preloader from './components/common/Preloader/Preloader.jsx';
 
 import {initializeApp} from './redux/app-reducer.js';
+import CitiesWeather from "./components/common/CitiesWeather/CitiesWeather";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer.jsx'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer.jsx'));
@@ -60,6 +61,7 @@ class App extends React.Component {
                         <Route
                             path='/users'
                             render={() => <UsersContainer/>}/>
+                        <Route path='/weather' render={() => <CitiesWeather/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
                         {/*<Route path='*' render={() => <div>404 not found</div>}/>*/}
                     </div>

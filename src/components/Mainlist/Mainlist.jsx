@@ -15,6 +15,7 @@ const Mainlist = (props) => {
                 <NavLink to='/news' activeClassName={classes.active} className={classes.item}>News</NavLink>
                 <NavLink to='/music' activeClassName={classes.active} className={classes.item}>Music</NavLink>
                 <NavLink to='/users' activeClassName={classes.active} className={classes.item}>Users</NavLink>
+                <NavLink to='/weather' activeClassName={classes.active} className={classes.item}>Weather in your city</NavLink>
                 <NavLink to='/settings' activeClassName={classes.active} className={classes.item}>Settings</NavLink>
             </div>
             <Friends friendsData={props.friendsData}/>
