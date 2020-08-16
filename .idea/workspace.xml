@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/components/BootstrapCarousel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgD.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/About.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +153,7 @@
       <workItem from="1596899419285" duration="3785000" />
       <workItem from="1597079241791" duration="1463000" />
       <workItem from="1597417841728" duration="3995000" />
-      <workItem from="1597593285393" duration="545000" />
+      <workItem from="1597593285393" duration="3616000" />
     </task>
     <servers />
   </component>
@@ -279,17 +276,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593713808887" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/my_app$profile_reducer_test_js.info" NAME="profile-reducer.test.js Coverage Results" MODIFIED="1593712369477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
