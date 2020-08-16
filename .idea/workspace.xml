@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/components/BootstrapHeader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/About.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Blog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Contacts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/components/BootstrapCarousel.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/images/imgD.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +156,7 @@
       <workItem from="1596899419285" duration="3785000" />
       <workItem from="1597079241791" duration="1463000" />
       <workItem from="1597417841728" duration="3995000" />
+      <workItem from="1597593285393" duration="545000" />
     </task>
     <servers />
   </component>
@@ -291,7 +286,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx</url>
           <line>4</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
