@@ -19,6 +19,7 @@ const BootstrapInfo = (props) => {
             <div className="pl-2">
                 <h6>- page Home - Carousel on bootstrap</h6>
                 <h6>- page About - Tabs on bootstrap</h6>
+                <h6>- page Contacts - Form on bootstrap</h6>
             </div>
         </div>
     );

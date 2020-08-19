@@ -4,8 +4,7 @@
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Contacts.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +152,8 @@
       <workItem from="1596899419285" duration="3785000" />
       <workItem from="1597079241791" duration="1463000" />
       <workItem from="1597417841728" duration="3995000" />
-      <workItem from="1597593285393" duration="3616000" />
+      <workItem from="1597593285393" duration="3735000" />
+      <workItem from="1597840934168" duration="623000" />
     </task>
     <servers />
   </component>
