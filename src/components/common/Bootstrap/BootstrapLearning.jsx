@@ -20,6 +20,7 @@ const BootstrapInfo = (props) => {
                 <h6>- page Home - Carousel on bootstrap</h6>
                 <h6>- page About - Tabs on bootstrap</h6>
                 <h6>- page Contacts - Form on bootstrap</h6>
+                <h6>- page Blog - Card on bootstrap</h6>
             </div>
         </div>
     );
