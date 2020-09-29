@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/TodoLists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/TodoLists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/editTask.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/listSvg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/AddList/AddList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/AddList/AddList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Badge/Badge.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Badge/Badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/List/List.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/List/List.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/AddTasksForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Task.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Tasks.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Tasks.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TodoLists/components/components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/BootstrapLearning.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Bootstrap/pages/Blog.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Yarn/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../react-js-3/todolist" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -153,7 +177,8 @@
       <workItem from="1597079241791" duration="1463000" />
       <workItem from="1597417841728" duration="3995000" />
       <workItem from="1597593285393" duration="3735000" />
-      <workItem from="1597840934168" duration="1876000" />
+      <workItem from="1597840934168" duration="2754000" />
+      <workItem from="1601403936992" duration="3896000" />
     </task>
     <servers />
   </component>
@@ -204,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="827" y="270" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593539148108" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593713619280">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597845819748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593713619280" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597845819748" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1595686106513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -17,6 +17,7 @@ import Preloader from './components/common/Preloader/Preloader.jsx';
 import {initializeApp} from './redux/app-reducer.js';
 import CitiesWeather from "./components/common/CitiesWeather/CitiesWeather";
 import BootstrapLearning from "./components/common/Bootstrap/BootstrapLearning";
+import TodoLists from "./components/common/TodoLists/TodoLists";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer.jsx'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer.jsx'));
@@ -24,7 +25,7 @@ const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileCo
 class App extends React.Component {
 
     catchAllUnhandledErrors = (promiseRejectionEvent) => {
-        alert("Some errors occured");
+        //alert("Some errors occured");
         console.log(promiseRejectionEvent);
     }
 
@@ -64,6 +65,7 @@ class App extends React.Component {
                             render={() => <UsersContainer/>}/>
                         <Route path='/weather' render={() => <CitiesWeather/>}/>
                         <Route path='/bootstrap' render={() => <BootstrapLearning/>}/>
+                        <Route path='/todolists' render={() => <TodoLists/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
                         {/*<Route path='*' render={() => <div>404 not found</div>}/>*/}
                     </div>

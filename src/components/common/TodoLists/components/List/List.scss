@@ -1,0 +1,60 @@
+.list {
+  $self: &;
+  margin-bottom: 30px;
+  &__add {
+    &-button {
+      opacity: 0.5;
+      transition: all 0.6s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  li {
+    padding: 10px 12px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
+    #{$self}__remove-icon {
+      opacity: 0;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    span {
+      width: 160px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &:hover {
+      background: rgba(255,255,255, 0.8);
+    }
+    &.active {
+      background: #ffffff;
+      box-shadow: 1px 2px 10px rgba(0,0,0, 0.04);
+      border-radius: 4px;
+    }
+    .badge {
+      position: relative;
+      left: 6px;
+    }
+    img {
+      width: 10px;
+      height: 10px;
+      margin-left: auto;
+    }
+  }
+  i {
+    display: inline-flex;
+    margin-right: 8px;
+    img {
+      opacity: 0.4;
+    }
+  }
+}

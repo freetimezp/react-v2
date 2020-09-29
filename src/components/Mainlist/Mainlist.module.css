@@ -12,6 +12,11 @@
   flex-direction: column;
 }
 
+.list a:hover {
+  text-decoration: none;
+  color: Gold;
+}
+
 .item {
   color: white;
 }
