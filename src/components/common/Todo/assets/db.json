@@ -39,11 +39,6 @@
       "name": "14/09/2020",
       "colorId": 8,
       "id": 14
-    },
-    {
-      "name": "123",
-      "colorId": 2,
-      "id": 15
     }
   ],
   "tasks": [
@@ -85,7 +80,7 @@
     },
     {
       "listId": 1,
-      "text": "qweqwe",
+      "text": "qweqwe1",
       "completed": true,
       "id": 8
     },
@@ -118,24 +113,6 @@
       "text": "1",
       "completed": false,
       "id": 22
-    },
-    {
-      "listId": 15,
-      "text": "123",
-      "completed": false,
-      "id": 23
-    },
-    {
-      "listId": 15,
-      "text": "123",
-      "completed": false,
-      "id": 24
-    },
-    {
-      "listId": 3,
-      "text": "123",
-      "completed": true,
-      "id": 25
     }
   ],
   "colors": [

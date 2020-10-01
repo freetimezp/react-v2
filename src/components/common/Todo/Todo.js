@@ -6,9 +6,9 @@ import {List, AddList, Tasks} from './components/components';
 
 //import DB from './assets/DB.json'; yarn fake-json
 
-import './TodoLists.scss';
+import './Todo.scss';
 
-function App() {
+function Todo() {
 
     const [lists, setLists] = useState(null);
     const [colors, setColors] = useState(null);
@@ -111,15 +111,15 @@ function App() {
     };
 
 
-    // this useEffect dont working normally
+    // this useEffect dont work normally
     useEffect(() => {
-        const listId = history.location.pathname.split('lists/')[1];
-        //console.log(listId);
+        const listId = history.location.pathname.split(`lists/`)[1];
         if (lists) {
             const list = lists.find(list => list.id === Number(listId));
             setActiveItem(list);
+            //console.log(listId);
             //console.log(history.location.pathname);
-            //console.log(list);
+            //console.log(lists);
             //console.log(activeItem);
         }
     }, [lists, history.location.pathname]);
@@ -129,7 +129,8 @@ function App() {
             <div className="todo__sidebar">
                 <List
                     onClickItem={list => {
-                        history.push(`todolists`);
+                        history.push(`todo`);
+                        //console.log(list);
                     }}
                     items={[
                         {
@@ -147,7 +148,7 @@ function App() {
                                     />
                                 </svg>),
                             name: 'Все задачи',
-                            active: history.location.pathname === 'lists/all'
+                            active: history.location.pathname
                         }
                     ]}/>
                 {lists ? ( // downloading lists from json server
@@ -160,10 +161,10 @@ function App() {
                         }}
                         onClickItem={list => {
                             history.push(`lists/${list.id}`);
-                            setActiveItem(list);
-                            //console.log(list);
+                            //setActiveItem(list);
+                            //console.log(list.tasks);
                             //console.log(activeItem);
-                            //console.log(history.location.pathname);
+                            console.log(history.location.pathname);
                             //console.log(history);
                         }}
                         activeItem={activeItem}
@@ -174,7 +175,6 @@ function App() {
                 <AddList onAddListItem={onAddListItem} colors={colors}/>
             </div>
             <div className="todo__tasks">
-                <Route exact path="todolists">
                     {lists &&
                     lists.map(list => (
                         <Tasks
@@ -189,8 +189,7 @@ function App() {
                         />
                     ))
                     }
-                </Route>
-                <Route path="lists/:id">
+
                     {lists && activeItem && (
                         <Tasks
                             list={activeItem}
@@ -201,10 +200,10 @@ function App() {
                             onCompleteTask={onCompleteTask}
                         />
                     )}
-                </Route>
+
             </div>
         </div>
     );
 }
 
-export default App;
+export default Todo;
