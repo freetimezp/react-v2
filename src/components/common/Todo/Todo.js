@@ -113,14 +113,16 @@ function Todo() {
 
     // this useEffect dont work normally
     useEffect(() => {
-        const listId = history.location.pathname.split(`lists/`)[1];
+        const listId = history.location.pathname.split(`/todo/lists/`)[1];
+        //console.log(history);
+        //console.log(history.location.pathname);
         if (lists) {
             const list = lists.find(list => list.id === Number(listId));
             setActiveItem(list);
             //console.log(listId);
             //console.log(history.location.pathname);
-            //console.log(lists);
-            //console.log(activeItem);
+            console.log(list);
+            console.log(activeItem);
         }
     }, [lists, history.location.pathname]);
 
@@ -129,7 +131,7 @@ function Todo() {
             <div className="todo__sidebar">
                 <List
                     onClickItem={list => {
-                        history.push(`todo`);
+                        history.push(`/todo`);
                         //console.log(list);
                     }}
                     items={[
@@ -160,11 +162,11 @@ function Todo() {
                             setLists(newLists);
                         }}
                         onClickItem={list => {
-                            history.push(`lists/${list.id}`);
-                            //setActiveItem(list);
-                            //console.log(list.tasks);
+                            history.push(`/todo/lists/${list.id}`);
+                            setActiveItem(list);
+                            //console.log(list);
                             //console.log(activeItem);
-                            console.log(history.location.pathname);
+                            //console.log(history.location.pathname);
                             //console.log(history);
                         }}
                         activeItem={activeItem}
@@ -175,6 +177,7 @@ function Todo() {
                 <AddList onAddListItem={onAddListItem} colors={colors}/>
             </div>
             <div className="todo__tasks">
+                <Route exact path='/todo'>
                     {lists &&
                     lists.map(list => (
                         <Tasks
@@ -189,18 +192,20 @@ function Todo() {
                         />
                     ))
                     }
-
+                </Route>
+                <Route path='/lists:id'>
                     {lists && activeItem && (
-                        <Tasks
-                            list={activeItem}
-                            onAddTask={onAddTask}
-                            onEditTitle={onEditListTitle}
-                            onRemoveTask={onRemoveTask}
-                            onEditTask={onEditTask}
-                            onCompleteTask={onCompleteTask}
-                        />
+                        // <Tasks
+                        //     list={activeItem}
+                        //     onAddTask={onAddTask}
+                        //     onEditTitle={onEditListTitle}
+                        //     onRemoveTask={onRemoveTask}
+                        //     onEditTask={onEditTask}
+                        //     onCompleteTask={onCompleteTask}
+                        // />
+                        <div>123</div>
                     )}
-
+                </Route>
             </div>
         </div>
     );

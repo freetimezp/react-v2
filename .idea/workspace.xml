@@ -2,48 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/img/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/img/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/img/edit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/img/editTask.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/img/listSvg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/AddList/AddList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/AddList/AddList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Badge/Badge.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Badge/Badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/List/List.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/List/List.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/AddTasksForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Task.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Todo/components/components.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mainlist/Mainlist.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/TodoLists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/TodoLists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/add.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/editTask.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/assets/img/listSvg.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/AddList/AddList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/AddList/AddList.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Badge/Badge.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Badge/Badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/List/List.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/List/List.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/AddTasksForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Task.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Tasks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/Tasks/Tasks.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TodoLists/components/components.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/Todo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/assets/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +160,7 @@
       <workItem from="1601489509713" duration="3468000" />
       <workItem from="1601573389892" duration="2364000" />
       <workItem from="1601576255638" duration="3118000" />
+      <workItem from="1601730496957" duration="6384000" />
     </task>
     <servers />
   </component>

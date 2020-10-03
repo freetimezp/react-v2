@@ -58,7 +58,7 @@
       "id": 3,
       "listId": 2,
       "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
@@ -118,27 +118,27 @@
   "colors": [
     {
       "id": 1,
-      "hex": "#C9D1D3",
+      "hex": "rgba(108, 123, 122, 0.8)",
       "name": "grey"
     },
     {
       "id": 2,
-      "hex": "#42B883",
+      "hex": "#28825a",
       "name": "green"
     },
     {
       "id": 3,
-      "hex": "#64C4ED",
+      "hex": "#3185a8",
       "name": "blue"
     },
     {
       "id": 4,
-      "hex": "#FFBBCC",
+      "hex": "#af7b88",
       "name": "pink"
     },
     {
       "id": 5,
-      "hex": "#B6E6BD",
+      "hex": "#4a614c",
       "name": "lime"
     },
     {
@@ -148,12 +148,12 @@
     },
     {
       "id": 7,
-      "hex": "#110133",
+      "hex": "#1d1b1b",
       "name": "black"
     },
     {
       "id": 8,
-      "hex": "#FF6464",
+      "hex": "#a70e0e",
       "name": "red"
     }
   ]

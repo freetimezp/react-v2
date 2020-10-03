@@ -74,8 +74,8 @@
     &-row {
       display: flex;
       align-items: center;
+      padding: 2px 4px;
       margin-bottom: 10px;
-      padding: 2px;
       border: 1px solid transparent;
       transition: all 0.5s ease;
       border-radius: 4px;
@@ -120,15 +120,17 @@
         margin-left: 10px;
         border: 1px solid transparent;
         font-size: 16px;
+        margin-bottom: 0;
       }
     }
   }
 
   .checkbox {
+    width: 20px;
+    height: 20px;
     input {
       display: none;
     }
-
     input:checked + label { // when custom checkbox is active
       background-color: #4dd599;
       border-color: #4dd599;

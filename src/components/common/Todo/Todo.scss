@@ -20,14 +20,16 @@ body {
   font-size: 12px;
   height: 700px;
   overflow: hidden;
+  background-color: #dde2dd;
   &__sidebar {
     padding: 60px 20px;
-    background-color: lighten(#22BE1E, 2%);
+    background-color: darken(#dde2dd, 3%);
     width: 220px;
     height: 100%;
     border-right: 1px solid darken(#22BE1E, 10%);
   }
   &__tasks {
+    background-color: #fff;
     flex: 1;
     padding: 60px;
     overflow: auto;
