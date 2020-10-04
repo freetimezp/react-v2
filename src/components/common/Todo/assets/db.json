@@ -39,6 +39,11 @@
       "name": "14/09/2020",
       "colorId": 8,
       "id": 14
+    },
+    {
+      "name": "Test 04.10.2020",
+      "colorId": 2,
+      "id": 15
     }
   ],
   "tasks": [
@@ -46,7 +51,7 @@
       "id": 1,
       "listId": 2,
       "text": "Изучить JavaScript",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
@@ -113,6 +118,24 @@
       "text": "1",
       "completed": false,
       "id": 22
+    },
+    {
+      "listId": 2,
+      "text": "Теста добавление задачи \\ редактирование \\ удаление",
+      "completed": false,
+      "id": 23
+    },
+    {
+      "listId": 4,
+      "text": "1",
+      "completed": false,
+      "id": 24
+    },
+    {
+      "listId": 4,
+      "text": "123",
+      "completed": false,
+      "id": 25
     }
   ],
   "colors": [

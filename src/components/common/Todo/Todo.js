@@ -121,8 +121,8 @@ function Todo() {
             setActiveItem(list);
             //console.log(listId);
             //console.log(history.location.pathname);
-            console.log(list);
-            console.log(activeItem);
+            //console.log(list);
+            //console.log(activeItem);
         }
     }, [lists, history.location.pathname]);
 
@@ -165,7 +165,7 @@ function Todo() {
                             history.push(`/todo/lists/${list.id}`);
                             setActiveItem(list);
                             //console.log(list);
-                            //console.log(activeItem);
+                            console.log(activeItem);
                             //console.log(history.location.pathname);
                             //console.log(history);
                         }}
@@ -193,17 +193,30 @@ function Todo() {
                     ))
                     }
                 </Route>
-                <Route path='/lists:id'>
+
+                {lists && activeItem && (
+                    <Route path={`/todo/lists/${activeItem.id}`}>
+                        <Tasks
+                            list={activeItem}
+                            onAddTask={onAddTask}
+                            onEditTitle={onEditListTitle}
+                            onRemoveTask={onRemoveTask}
+                            onEditTask={onEditTask}
+                            onCompleteTask={onCompleteTask}
+                        />
+                    </Route>
+                )}
+
+                <Route path='/todo/lists/2'>
                     {lists && activeItem && (
-                        // <Tasks
-                        //     list={activeItem}
-                        //     onAddTask={onAddTask}
-                        //     onEditTitle={onEditListTitle}
-                        //     onRemoveTask={onRemoveTask}
-                        //     onEditTask={onEditTask}
-                        //     onCompleteTask={onCompleteTask}
-                        // />
-                        <div>123</div>
+                        <Tasks
+                            list={activeItem}
+                            onAddTask={onAddTask}
+                            onEditTitle={onEditListTitle}
+                            onRemoveTask={onRemoveTask}
+                            onEditTask={onEditTask}
+                            onCompleteTask={onCompleteTask}
+                        />
                     )}
                 </Route>
             </div>

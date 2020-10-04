@@ -35,7 +35,7 @@ const Tasks = ({
 
     return (
         <div className="tasks">
-            <Link to={`/lists/${list.id}`}>
+            <Link to={`/todo/lists/${list.id}`}>
                 <h2 style={{color: list.color.hex}} className="tasks__title">
                     {list.name}
                     <img onClick={editTitle} src={editSvg} alt="edit icon"/>

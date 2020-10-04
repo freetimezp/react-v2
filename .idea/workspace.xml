@@ -4,9 +4,8 @@
     <list default="true" id="b25fd256-09d3-4195-a569-47005d229497" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Todo/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/Todo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/Todo.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Todo/assets/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/assets/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Todo/components/Tasks/Tasks.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +160,7 @@
       <workItem from="1601573389892" duration="2364000" />
       <workItem from="1601576255638" duration="3118000" />
       <workItem from="1601730496957" duration="6384000" />
+      <workItem from="1601808250003" duration="1396000" />
     </task>
     <servers />
   </component>
